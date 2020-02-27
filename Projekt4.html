@@ -1,0 +1,643 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="">
+    <meta name="author" content="Samantha Isted">
+	<meta name="keywords" content="Raspberry,Raspberry Pi,Pi,Teamprojekt,HTWG,Hochschule,FH,Konstanz,Bodensee,Technik,Studieren, Universität,Informatik">
+	<link rel="shortcut icon" href="Bilder/icon_2.png" type="image/x-icon" />
+
+    <!-- Bootstrap core CSS -->
+    <link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Custom styles for this template -->
+    <link href="css/business-frontpage.css" rel="stylesheet">
+
+	<title>Raspberry Pi</title>
+<style>
+code { 
+  font-family: monospace;
+  background-color: black;
+  color: white;
+}
+datei { 
+  background-color: lightblue;
+}
+</style>
+  </head>
+  <body>
+
+    <!-- Navigation -->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
+      <div class="container">
+        <a class="navbar-brand" href="index.html"><img id="logo" src="Bilder/icon.jpeg" alt="logo"></a> <!-- statt index.html einfach /-->
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarResponsive">
+          <ul class="navbar-nav ml-auto">
+		  <li class="nav-item">
+              <a class="nav-link" href="index.html">Startseite</a>
+            </li>
+		  	<li class="nav-item">
+              <a class="nav-link" href="index.html">Startseite</a>
+            </li>
+			<li class="nav-item">
+              <a class="nav-link" href="Projekte.html">Projekte</a>
+            </li>
+			<li class="nav-item">
+              <a class="nav-link" href="Galerie.html">Galerie</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="Kontakt.html">Kontakt</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+
+  <!-- Page Content -->
+    <div class="container">
+      <div class="row">
+        <div class="col-sm-8">
+          <h1 class="mt-4">Projekt 4 Wifi-Butler</h1>
+		  <h4>Immer WLAN für deine Freunde! / free wifi</h4>
+			<p>In diesem Projekt werden wir mit einem Raspberry Pi einen Wifi-Butler erstellen.
+			<br>Bevor wir aber dieses Projekt anfangen schau dir das Tutorial an: <a class="btn btn-primary btn-lg" href="http://isted.eu/Tutorial.html">Tutorial »</a><br>
+			<br></p><h3>Hier ein kleiner Vorgeschmack wie es am Ende aussieht:</h3>
+			<video src="Bilder/Projekt4/Projekt4_iOS_login.mp4" controls="controls">
+			Ihr Browser kann dieses Video nicht wiedergeben.<br>
+			Dieser Film zeigt eine Demonstration des video-Elements. 
+			</video>
+			<video src="Bilder/Projekt4/Projekt4_android_login.mp4" controls="controls">
+			Ihr Browser kann dieses Video nicht wiedergeben.<br>
+			Dieser Film zeigt eine Demonstration des video-Elements. 
+			</video>
+<h4>Was ist ein Wifi Butler?</h4>
+WiFiButler fuer ein Gaeste-Wlan, dass jeden Tag den Schluessel wechselt 
+und einen einfachen Zugang via QR-Code-Scanner ermoeglicht. Dieser 
+hostet ein eigenes Wlan-Netzwerk und dient nebenbei als elektronischer 
+Bilderrahmen.
+<h4>Die Hardware</h4>
+In meinem Beispiel verwende ich ein RaspberryPi 3 Model B+ un einen dazu
+ passenden Raspberry Pi 7" 
+<a href="https://www.raspberrypi.org/products/raspberry-pi-touch-display/">Touch Display</a>.
+Alternativ kann auch ein anderes RaspberryPi Model verwendet werden, 
+manchen jedoch fehlen z.B. ein integrierter WiFi-Adapter oder ein 
+Lan-Anschluss usw. im folgenden erklaere ich aber nur die Installation 
+mit dem von mir verwendeten Modell. Genauso kann auch ein anderer 
+Touchdisplay verwendet werden, jedoch sollte sichergestellt werden, dass
+ auf dem verwendeten RaspbianOS (Linux) entsprechende Treiber dafuer 
+vorhanden sind.
+<br>
+Um den WiFiButler auf dem schon in den Touchdisplay einebauten PI zu installieren kann einfach eine USB-Tastatur 
+an das Touchdisplay angeschlossen werden, natuerlich ist auch das Anschliessen einer Maus moeglich. 
+Ansonsten kann einfach mit der Tastenkombination strg + alt + t ein Terminal geoeffnet werden.
+Es ist auch moeglich vom eigenen Rechner aus eine SSH-Verbindung herzustellen. 
+Dafuer kann folgendes Tutorial verwendet werden: <a href="https://gridscale.io/community/tutorials/per-ssh-mit-cloud-server-verbinden/">ssh Tutorial</a>
+<br>
+Zum Einbau des RaspberryPi in den Display habe ich folgende Anleitung 
+benutzt: <a href="https://thepihut.com/blogs/raspberry-pi-tutorials/raspberry-pi-7-touch-screen-assembly-guide">Display Einbauen</a>
+Hier sind Videos und einige Bilder zum Einbauen.
+<br>
+			<div class="col-md-6">
+		<video src="Bilder/Projekt4/video_1.mp4" controls="controls">
+			Ihr Browser kann dieses Video nicht wiedergeben.<br>
+			Dieser Film zeigt eine Demonstration des video-Elements. 
+			</video>
+			</div>
+			<div class="col-md-6">
+		<video src="Bilder/Projekt4/video_2.mp4" controls="controls">
+			Ihr Browser kann dieses Video nicht wiedergeben.<br>
+			Dieser Film zeigt eine Demonstration des video-Elements. 
+			</video>
+			</div>	
+
+	<div class="row">
+			<div class="col-md-6">
+			<div class="thumbnail">
+				<img src="Bilder/Projekt4/1.jpg" title="Wifi-Butler" alt="Bild konnte nicht geladen werden." style="width:100%">
+			</div>
+			</div>
+			<div class="col-md-6">
+			<div class="thumbnail">
+				<img src="Bilder/Projekt4/2.jpg" title="Wifi-Butler" alt="Bild konnte nicht geladen werden." style="width:100%">
+			</div></div>
+	</div>
+	<div class="row">
+	<div class="col-md-6">
+			<div class="thumbnail">
+				<img src="Bilder/Projekt4/3.jpg" title="Wifi-Butler" alt="Bild konnte nicht geladen werden." style="width:100%">
+			</div></div>
+			<div class="col-md-6">
+			<div class="thumbnail">
+				<img src="Bilder/Projekt4/4.jpg" title="Wifi-Butler" alt="Bild konnte nicht geladen werden." style="width:100%">
+			</div></div>
+	</div>
+	<div class="row">
+	<div class="col-md-6">
+			<div class="thumbnail">
+				<img src="Bilder/Projekt4/5.jpg" title="Wifi-Butler" alt="Bild konnte nicht geladen werden." style="width:100%">
+			</div></div>
+			<div class="col-md-6">
+			<div class="thumbnail">
+				<img src="Bilder/Projekt4/6.jpg" title="Wifi-Butler" alt="Bild konnte nicht geladen werden." style="width:100%">
+			</div></div>
+	</div>
+	<div class="row">
+	<div class="col-md-6">
+			<div class="thumbnail">
+				<img src="Bilder/Projekt4/7.jpg" title="Wifi-Butler" alt="Bild konnte nicht geladen werden." style="width:100%">
+			</div></div>
+			<div class="col-md-6">
+			<div class="thumbnail">
+				<img src="Bilder/Projekt4/8.jpg" title="Wifi-Butler" alt="Bild konnte nicht geladen werden." style="width:100%">
+			</div></div>
+	</div>	
+<br>
+Nun kann das RaspberryPi gestartet werden, dabei faellt auf, dass das 
+Bild auf dem Bildschirm auf dem Kopf steht. Um dies zu aendern, kann das 
+Bild mit einem Eintrag in der Datei /boot/config.txt gedreht werden, 
+dafuer muss dort am Ende der Datei folgende Zeile eingefuegt werden:
+<br><code>lcd_rotate=2</code><br>
+Dafuer kann der Editor Nano benutzt werden, der Befehl lautet:
+<br><code>sudo nano /boot/config.txt</code><br>
+Damit die Aenderung uebernommen wird, muss das PI neu gestartet werden.
+
+<h4>Die Software</h4>
+Um den WiFiButler einrichten zu koennen, muessen folgende Packete mit dem Packetmanager apt installiert werden:
+<ul>
+<li>dnsmasq
+</li><li>hostapd
+</li><li>python-kivy (wird spaeter installiert mit pip)
+</li><li>qrencode
+</li><li>rng-tools
+</li><li>libsdl2-mixer-dev
+</li><li>libsdl2-image-dev
+</li><li>libsdl2-ttf-dev
+</li><li>libsdl2-dev
+</li></ul>
+Dafuer kann man im Terminal einfach folgenden Befehl ausfuehren:
+<br><code>sudo apt install dnsmasq hostapd qrencode rng-tools libsdl2-mixer-dev libsdl2-image-dev libsdl2-ttf-dev libsdl2-dev
+</code><br>
+Als erstes richten wir mit Hilfe des Tools dhcpd den auf dem RaspberryPi
+ befindlichen WiFi-Adapter ein um unser eigenes Netzwerk zur Verfuegung 
+stellen zu koennen.
+Fuer Interessierte hier ein wenig Theorie zum Verstaendnis dessen was wir tun:
+Im Normalfall erhaelt der verwendete Netzwerkadapter (Ethernet(LAN) oder
+ WiFi(WLAN) seine IP-Adresse durch den dhcp Server des 
+Routers/Accesspoint/Hardware-Firewall zugewiesen. Da wir den 
+WiFi-Adapter als eigenen Accesspoint benutzen moechten, muessen wir 
+diesem eine statische IP-Zuweisen. Dabei moechten wir den Geraeten die 
+sich mit dem WiFiButler verbinden ein eigenes Subnet zuweisen, 
+ueblicherweise laufen heimische Netzwerke im Subnet 192.168.0.* und 
+nutzen die IP 192.168.0.1 als Gateway-Adresse. Hier verbirgt sich ein 
+NAT (Network Adress Translation). Dieses leitet aus dem LAN-Netzwerk 
+ankommende Anfragen, wenn diese nicht wieder in das eigene LAN-Netzwerk 
+gehen, in das Internet (WAN) weiter, wenn nun von einem Server im 
+Internet eine Antwort auf die entsprechende Anfrage kommt, hat sich das 
+NAT gemerkt wo diese hin geroutet werden muss und leitet sie an die 
+entsprechende IP-Adresse im LAN-Netzwerk weiter. Hat kein Geraet im LAN 
+das Antwort-Packet angefordert, wird diese ueblicherweise verworfen 
+(Firewall.)
+<br>
+Wir moechten, dass unser WiFi-Adapter ein eigenes (eher unuebliches) 
+Subnet erhaelt, fuer dies habe ich den IP-Bereich 192.168.250.* 
+gewaehlt. Ihr koennt natuerlich auch eine andere IP-Adresse verwenden, 
+dabei ist es jedoch von Vorteil eine IP zu nutzen, die mit 192.168.*.* 
+anfaengt, da diese IP-Adressen ueblicherweise fuer LAN-Netzwerke 
+verwendet werden kann es so selten zu IP-Kollisionen kommen. Zusaetzlich 
+sollte beachtet werden, dass im heimischen LAN kein anderes Subnet im 
+gleichen IP-Bereich existiert 192.168.(-).*, (-) steht hierbei fuer eine
+ einzigartige Zahl, die sonst kein Netzwerk im LAN verwenden sollte.
+Desweiteren ist es von Vorteil, das RaspberryPI spaeter mit dem 
+LAN-Kabel, falls vorhanden, in den GaestePorts des eigenen Routers 
+einzustecken, dadurch wird verhindert, dass Gaeste, die mit dem 
+WiFi-Butler verbunden sind, Zugriff auf fest im heimischen Netzwerk 
+installierte Geraete erhalten koennen.
+Um dem WiFi-Adpater eine statische IP zuweisen zu koennen, editieren wir 
+die Datei /etc/dhcpcd.conf und tragen die weiter unten makierten Zeilen ein. 
+Dies kann mit folgendem Kommando getan werden:
+<br><code>sudo nano /etc/dhcpcd.conf</code><br>
+Da der WiFi-Adapter in diesem Fall als Gateway fungiert, erhaelt er die 
+IP-Adresse 192.168.250.1, und da nur der letzte Zahlenblock der IP in 
+diesem Subnet variabel sein darf, benoetigen wir eine sogenannte Netzmaske mit dem Wert 24.
+<br>Theorie:<br>
+Eine Ipv5 Adresse besteht aus 4 Zahlenbloecken, die jeweils einen Wert 
+von 0-255 annehmen koennen. Dies entspricht 256 Moeglichkeiten (2^8). 
+Daraus ergibt sich die Netzmaske, soll nur der erste Zahlenblock fuer 
+ein Subnet festgelegt werden, kann man dem Gateway dies mit der 
+Netzmaske 8 mitteilen. In unserem Fall waere das dann 192.168.250.1/8, 
+da wir aber die ersten drei Bloecke feststehend haben moechten, muessen 
+wir fuer die Netzmaske 3*8 rechnen und erhalten die 24.
+<br>
+Nach dem Oeffnen der Datei /etc/dhcpcd.conf mit Nano fuegen wir am Ende der Datei folgende Zeilen ein:
+<br><code>interface wlan0 <br>static ip_address=192.168.250.1/24</code><br>
+<img src="Bilder/Projekt4/etc_dhcpcd.conf.png" title="Wifi-Butler" alt="Bild konnte nicht geladen werden." style="width:100%">
+<div class="caption">
+<p>etc_dhcpcd.conf</p>
+</div>
+<datei>(Beispielhaft stelle ich im Anhang meine /etc/dhcpcd.conf Datei zur Verfuegung.)</datei>
+Nachdem die Datei entsprechend veraendert wurde, muss der DHCPCD-Daemon 
+(ein Daemon ist ein System-Dienst, bzw.
+Programm, dass im Hintergrund laeuft)
+neu gestartet werden. Dies geschieht mit folgendem Kommando:
+<br><code>sudo systemctl restart dhcpcd</code><br>
+Ausserdem muss noch die Netzwerkverwaltung von Raspbian  
+des WiFis gestoppt werden, dies geschieht mit dem Kommando:
+<br><code>sudo systemctl stop wpa_supplicant.service</code><br>
+Um zu verhindern, dass der Service beim Neustarten wieder gestartet wird, verwenden wir folgendes Kommando:
+<br><code>sudo systemctl disable wpa_supplicant.service</code><br>
+Nun kann noch geprueft werden, ob der Service wirklich ausgeschaltet ist:
+<br><code>sudo systemctl status wpa_supplicant.service</code><br>
+Als naechstes wird ein eigener DHCP-Server fuer WLAN konfiguriert. Dies 
+geschieht mithilfe des Tools dnsmasq.
+Theorie:
+Der DHCP-Server sorgt dafuer, dass ein Geraet, welches sich in einem 
+Netzwerk anmeldet automatisch eine fuer dieses Netzwerk einzigartige 
+IP-Adresse zugewiesen bekommt. Dadurch muss sich kein Geraetebenutzer 
+mehr eine statische Adresse zuweisen (wie wir es im vorherigen Schritt 
+fuer den WiFiButler gemacht haben) um mit anderen Netzgeraeten 
+kommunizieren zu koennen. 
+Wer vorsichtshalber die Default-Konfiguration sicher moechte, kann dies 
+mit folgendem Kommando tun, dies sollte in diesem Fall aber nicht noetig
+ sein:
+<br><code>sudo mv /etc/dnsmasq.conf /etc/dnsmasq.conf_old</code><br>
+Ansonsten kann die Konfiguration auch einfach geloescht werden mit dem Kommando:
+<br><code>sudo rm -f /etc/dnsmasq.conf</code><br>
+Danach koennen wir mit Nano eine neue Konfiguration anlegen:
+<br><code>sudo nano /etc/dnsmasq.conf</code><br>
+			<div class="thumbnail">
+				<img src="Bilder/Projekt4/etc_dnsmasq.conf.png" title="Wifi-Butler" alt="Bild konnte nicht geladen werden." style="width:100%">
+				<div class="caption">
+				<p>etc_dnsmasq.conf</p>
+				</div>
+			</div>
+und fuegen dann folgenden Inhalt ein <datei>(auch diese Datei habe ich im Anhang hinzugefuegt, diese kann also auch einfach kopiert werden):
+<br>
+<br># DHCP-Server aktiv für WLAN-Interface
+<br>interface=wlan0
+<br>
+<br># DHCP-Server nicht aktiv für bestehendes Netzwerk
+<br>no-dhcp-interface=eth0
+<br>
+<br># IPv4-Adressbereich und Lease-Time
+<br>dhcp-range=192.168.250.100,192.168.250.200,255.255.255.0,24h
+<br>
+<br># DNS
+<br>dhcp-option=option:dns-server,192.168.250.1
+</datei>
+<br>Zu beachten ist hierbei: Zeilen die mit # beginnen sind nur 
+Kommentare, die das Verstaendnis des Nutzers erleichtern sollen, aber im
+ Programm keinerlei Wirkung entfallen, diese koennen also auch 
+weggelassen werden.
+<h8>Theorie:</h8>
+<br>Ich erklaere hier welche Bewandnis die jeweiligen Code Zeilen haben.
+<br><code>interface=wlan0</code><br>
+teilt mit, dass wir auf dem Interface wlan0 einen DHCP-Server laufen lassen moechten.
+<br><code>no-dhcp-interface=eth0</code><br>
+teilt mit, dass wir auf dem Interface eth0 keinen DHCP-Server laufen 
+lassen moechten. Dieser Adapter ist ja ueber das LAN-Kabel mit dem 
+Router verbunden und bekommt seine IP-Adresse dynamisch von dessen 
+DHCP-Server zugewiesen!
+<br>
+<br><code>dhcp-range=192.168.250.100,192.168.250.200,255.255.255.0,24h</code>
+<br>teilt mit, dass wir Geraeten, die sich in unserem WLAN anmelden 
+moechten IP-Adressen im Bereich 192.168.250.100-200 vergeben. Die darauf
+ folgende Netzmaske 255.255.255.0 ist im Prinzip eine andere Darstellung
+ der oben schon beschriebenen /24. Am Ende wird mit 24h noch mitgeteilt,
+ wie lange ein solcher IP-Lease bestehen bleibt. D.h. nach Ablauf des 
+Leases von 24h ist es moeglich, dass das Geraet eine neue IP-Adresse 
+mitgeteilt bekommt.
+<br>
+<br><code>dhcp-option=option:dns-server,192.168.250.1</code>
+<br>teilt mit, dass Geraete im Netzwerk unseren Gateway auch als 
+DNS-Server benutzen koennen, DNS-Anfragen werden bei dieser 
+Konfiguration ueblicherweise an den Router, mit welchem der WiFiButler 
+verbunden ist, weitergeleitet.
+<br>Die neu erstellte Konfigurationsdatei kann mit folgendem Kommando getestet werden:
+<br><code>sudo dnsmasq --test -C /etc/dnsmasq.conf</code>
+<br>wenn sie keinen Fehler enthaelt, sollte folgende Ausgabe erscheinen:
+<br><code>dnsmasq: syntax check OK.</code>
+<br>Anschliessend muss dnsmasq noch neu gestartet werden, dies geschieht mit dem Kommando:
+<br><code>sudo systemctl restart dnsmasq</code>
+<br>Um dafuer zu sorgen, dass dnsmasq nach jedem Neustart gestartet wird, sollte noch dieses Kommando ausgefuehrt werden:
+<br><code>sudo systemctl enable dnsmasq</code>
+<br>Um festzustellen, ob alles wie gewuenscht funktioniert hat, kann dieses Kommando verwendet werden:
+<br><code>sudo systemctl status dnsmasq</code>
+<br>Um sicherzustellen, dass der WiFiButler die empfangenen Anfragen ins
+ Internet weiterleiten kann, muss ausserdem noch eine Weiterleitung in 
+der Datei /etc/sysctl.conf eingerichtet werden. Dies geschieht wieder 
+mit Nano:
+<br><code>sudo nano /etc/sysctl.conf</code>
+<br>hier tragen wir am Ende der Datei folgende Zeilen ein:
+<br><code>net.ipv4.ip_forward=1<br>net.ipv6.conf.all.forwarding=1</code><br>
+			<div class="thumbnail">
+				<img src="Bilder/Projekt4/etc_sysctl.conf.png" title="Wifi-Butler" alt="Bild konnte nicht geladen werden." style="width:100%">
+				<div class="caption">
+				<p>etc_sysctl.conf</p>
+				</div>
+			</div>
+Nun muss noch der Access-Point eingerichtet werden, dieser sorgt dafuer,
+ dass Geraete, die sich mit unserem neuen WLAN verbinden moechten, dieses
+ auch ueber die SSID (Netzwerknamen) finden koennen und sich mit einem 
+Passwort in unserem WPA2-geschuetztem Netzwerk anmelden koennen.
+Dafuer erstellen wir die Datei /etc/hostapd/hostapd.conf 
+mit Nano:
+<br><code>sudo nano /etc/hostapd/hostapd.conf</code><br>
+	<div class="thumbnail">
+		<img src="Bilder/Projekt4/etc_hostapd_hostapd.conf.png" title="Wifi-Butler" alt="Bild konnte nicht geladen werden." style="width:100%">
+		<div class="caption">
+		<p>etc_hostapd_hostapd.conf</p>
+		</div>
+	</div>
+<br><datei>Der benoetigte Inhalt dieser Datei kann aus meinem Beispiel im Anhang entnommen werden.</datei>
+Da die Datei unser WLAN-Passwort enthaelt, sollte dafuer gesorgt werden,
+ dass sie ausschliesslich vom Root-Nutzer gelesen oder geschrieben 
+werden kann, ausfuehrbar muss sie hingegen nicht sein. Dies geschieht 
+mit folgendem Kommando:
+<br><code>sudo chmod 600 /etc/hostapd/hostapd.conf</code>
+<br>Eine genauere Beschreibung des Programms chmod gibt es <a href="https://www.computerhope.com/unix/uchmod.htm">hier</a>.
+Um zu pruefen, ob die Konfigurationsdatei korrekt erstellt wurde, 
+starten wir hostapd mit der soeben erstellten Konfiguration, das Flag 
+-dd sorgt dafuer, dass wir mehr Informationen ueber den laufenden 
+Prozess erhalten.
+<br><code>sudo hostapd -dd /etc/hostapd/hostapd.conf</code>
+<br>Nun muss der Dateipfad zu unserer Konfigurationsdatei noch in der Datei <code>/etc/default/hostapd</code> eingetragen werden. Dies geschieht wieder mit Nano:
+<br><code>sudo nano /etc/default/hostapd</code>
+<br>Am Ende der Datei werden folgede Zeilen eingetragen:
+<br><code>RUN_DAEMON=yes<br>DAEMON_CONF="/etc/hostapd/hostapd.conf"</code>
+			<div class="thumbnail">
+				<img src="Bilder/Projekt4/etc_default_hostapd.png" title="Wifi-Butler" alt="Bild konnte nicht geladen werden." style="width:100%">
+				<div class="caption">
+				<p>etc_default_hostapd</p>
+				</div>
+			</div>
+Um hostapd nutzen zu koennen, muessen wir den systemd Service noch "demaskieren" dies 
+geschieht mit folgendem Kommando:
+<br><code>sudo systemctl unmask hostapd</code>
+Danach starten wir hostapd mit dem Kommando:
+<br><code>sudo systemctl start hostapd</code>
+und stellen sicher, dass systemd den Service in Zukunft bei dem Systemstart startet:
+<br><code>sudo systemctl enable hostapd</code>
+<br>Der Status kann dann wieder mit folgendem Kommando ueberprueft werden:
+<br><code>sudo systemctl status hostapd</code>
+<br>Nun muss noch das NAT aktiviert werden, damit die Antwortpackete aus
+ dem Internet auch ihren Weg zu den Gastgeraeten finden. Dafuer ist die 
+Firewall zustaendig. Dies geschieht mit dem Kommando:
+<br><code>sudo iptables -t nat -A POSTROUTING -o eth0 -j MASQUERADE</code>
+<br>Danach speichern wir die aktuellen Firewalleinstellungen, um sie beim
+ Neustart wiederherstellen zu koennen, mithilfe des Kommandos:
+<br><code>sudo sh -c "iptables-save &gt; /etc/iptables.nat"</code>
+<br>um die Einstellung beim Start wieder laden zu koennen, tragen wir am 
+Ende der Datei /etc/rc.local einen Kommando ein, um diese wieder zu 
+laden, da die Datei /etc/rc.local beim Start des Systems ausgefuehrt 
+wird. Wir bearbeiten die Datei wieder mit Nano:
+<br><code>sudo nano /etc/rc.local</code>
+<br>und tragen am Ende der Datei vor der Zeile exit 0 folgendes Kommando ein:
+<br><code>iptables-restore &lt; /etc/iptables.nat</code>
+			<div class="thumbnail">
+				<img src="Bilder/Projekt4/etc_rc.local1.png" title="Wifi-Butler" alt="Bild konnte nicht geladen werden." style="width:100%">
+				<div class="caption">
+				<p>etc_rc.local1</p>
+				</div>
+			</div>	
+Mit dem Kommando:<code>ip a</code><br>
+<br>Kann nun geprueft werden, ob der Adapter nun laueft und die passende IP-Adresse hat. Der Output sollte dabei in etwa so aussehen:
+<code>…
+<br>3: wlan0: <broadcast,multicast,up,lower_up> mtu 1500 qdisc pfifo_fast state UP group default qlen 1000 
+   <br>link/ether b8:27:eb:eb:6e:c4 brd ff:ff:ff:ff:ff:ff 
+   <br>inet 192.168.250.1/24 brd 192.168.250.255 scope global noprefixroute wlan0 
+      <br>valid_lft forever preferred_lft forever 
+   <br>inet6 fe80::4145:1f22:79c9:18ad/64 scope link  
+      <br>valid_lft forever preferred_lft forever
+	  <br>
+<br>inet 192.168.250.1/24 </broadcast,multicast,up,lower_up></code>Zeigt
+ uns, dass alles wie gewuenscht funktioniert hat.
+<datei>Um den Schluessel fuer das Wlan regelmaessig neu generieren 
+lassen zu koennen, habe ich ein kleines Bash-Skript, mit dem Namen wlankeygen, vorbereitet.
+Dieses findet ihr auch im Anhang.</datei>
+	<div class="thumbnail">
+		<img src="Bilder/Projekt4/ust_local_bin_wlankeygen.png" title="Wifi-Butler" alt="Bild konnte nicht geladen werden." style="width:100%">
+		<div class="caption">
+		<p>ust_local_bin_wlankeygen</p>
+		</div>
+	</div>
+Das Skript generiert ein 10-stelliges Passwort, traegt dieses dann in  
+der hostapd.conf Datei ein, startet hostapd neu, generiert dann 2 
+QR-Codes fuer iOS und Android sowie Windows-Geraete und schreibt diese 
+am Ende noch in eine Konfigurationsdatei /var/guestwlan/wlan.cfg, aus der 
+wir spaeter in der Benutzeroberflaeche die Zugangsdaten zum WiFi 
+auslesen koennen.
+<br><br>
+Diese Datei kann entweder mit scp vom Host-Rechner auf das RaspberryPi 
+kopiert werden oder einfach mit Nano erstellt und geoeffnet werden und 
+dann der Inhalt mit copy-paste uebertragen werden. Dafuer verwenden wir 
+wieder folgendes Kommando:
+<br><code>sudo nano /usr/local/bin/wlankeygen</code><br>
+Anschliessend machen wir das Skript noch fuer den Root-User ausfuehrbar mit dem Kommando:
+<br><code>sudo chmod 744 /usr/local/bin/wlankeygen</code><br>
+terminal mode aktivieren:
+<br><code>sudo raspi-config</code><br>
+Dann in dem erscheinenen Menue den Menuepunkt Boot-Options waehlen, darin den Untereintrag Desktop/CLI 
+und dort console Autologin. Wenn die Einstellungen gesetzt wurden, koennen diese mit Finish bestaetigt werden.
+Daraufhin noch den Reboot bestaetigen.
+<br><br>
+Fuer die grafische Benutzeroberflaeche verwenden wir die Python 
+Bibliothek kivy, desweiteren verwenden wir Python 3. Um die Bibliothek 
+zu installieren, kann der Python3-Installationsmanager pip3 verwendet 
+werden. Dies geschieht mit dem Kommando:
+<br><code>sudo pip3 install --upgrade kivy</code><br>
+Mit demselben Kommando kann die Bibliothek uebrigens auch spaeter 
+geupdatet werden.
+Fuer die Benutzeroberflaeche habe ich ein Python-Skript sowie eine 
+Kivy-Datei vorbereitet, welche im Zusammenspiel den kompletten 
+elektronischen Bilderrahmen, sowie die Darstellung des Passwortes, der 
+SSID und der beiden QR-Codes uebernehmen, um den Zugang zum WiFi zu 
+gewaehrleisten. <datei>Die Dateien befinden sich wie ueblich im Anhang und 
+koennen wieder mit scp kopiert oder mit Nano erstellt und der Inhalt 
+eingefuegt werden.</datei> Dafuer dienen die Kommandos:
+<br><code>sudo nano /usr/local/bin/guestwlan.kv
+<br>sudo nano /usr/local/bin/GuestWLANApp.py</code><br>
+Anschliessend muss die .py Datei noch ausfuehrbar gemacht werden:
+<code><br>sudo chmod +x /usr/local/bin/GuestWLANApp.py</code><br>
+Ausgefuehrt werden kann das Ganze dann mit dem Kommando:
+<br>
+Bilder fuer die Diashow koennen z.B. mit dem Kommando:
+<br><code>scp -r <pfad zum="" ordner="" mit="" den="" bildern="" auf="" dem="" host="" system=""> pi@<hier die="" netzwerk-ip="" deines="" raspberrypi="" eintragen="">:<pfad zum="" ablegen,="" archtung="" nutzer="" pi="" kann="" nichts="" in="" ordnern="" mit="" root="" rechten="" ablegen!=""></pfad></hier></pfad></code><br>
+uebertragen werden, das Ganze sieht dann z.B. so aus:
+<br><code>scp -r /home/myuser/Bilder pi@192.168.0.36:/home/pi/Downloads/ </code><br>
+danach muessen die Bilder noch an den von meinem Pythonskript erwarteten Pfad gelegt werden,
+ dieser muss erst angelegt werden:
+<br><code>sudo mkdir /var/guestwlan</code><br>
+<br><code>sudo mkdir /var/guestwlan/images</code><br>
+danach koennen die Bilder verschoben werden:
+<br><code>sudo cp /home/pi/Downloads/Bilder/* /var/guestwlan/images</code><br>
+Als letztes muss noch einmal das wlankeygen Skript ausgefuehrt werden, damit die QR-Codes generiert werden.
+Dies geschieht mit folgendem Komanndo:
+<br><code>sudo GuestWLANApp.py</code><br>
+Nun kann unser Skript mit dem Kommando:
+<br><code>GuestWLANApp.py</code><br>
+getestet werden.
+Achtung, hier kann es bei einer SSH-Verbindung zu Problemen fuehren, da 
+das Bild ja auf dem Bildschirm und nicht auf der Remote-Konsole 
+dargestellt werden soll.
+Jetzt ist noch ein Mechanismus noetig, der das Wlan-Passwort jeden 
+Tag aendert. Dafuer benutzen wir einen Cronjob. Dieser kann einfach mit 
+einem Eintrag in der crontab erstellt werden. Dies geschieht mit 
+folgendem Kommando:
+<br><code>sudo crontab -e</code><br>
+Beim erstmaligen Ausfuehren des Kommandos als Root-User wird noch nach 
+einem Editor fuer die crontab gefragt, hier kann der Default-Wert Nano 
+genutzt werden, also einfach einmal die Entertaste druecken. Fuer einen 
+Cronjob der z.B. jeden Morgen um 6 ein neues Passwort erstellt, kann dann
+ am Ende der Datei folgende Zeile eingefuegt werden:
+<br><code>0 6 * * * /usr/local/bin/wlankeygen</code><br>
+Achtung, damit der Cronjob zur erwarteten Uhrzeit ausgefuehrt werden kann,
+muss natuerlich auch die Uhr auf dem RaspberryPi stimmen.
+<br>
+Nun sollte Kivy noch fuer den root user und den pi user konfiguriert werden, dafuer kann die von mir beigelegte
+ config.ini Datei verwendet werden. Die Kommandos sind:
+<br><code>sudo nano /root/.kivy/config.ini</code><br>
+<br><code>nano ~/.kivy/config.ini</code><br>
+
+<datei>In den jeweiligen Dateien muss der gesamte Inhalt, durch den in der von mir zur Verfuegung gestellten config.ini Datei, 
+ersetzt werden.</datei>
+
+Nun muss noch dafuer gesorgt werden, dass der WiFiButler bei dem Systemstart gestartet wird, dafuer 
+nutzen wir wieder die Datei /etc/rc.local
+
+<br><code>sudo nano /etc/rc.local</code><br>
+
+und tragen dort vor der Zeile mit exit 0 Folgendes ein:
+
+<br><code>GuestWLANApp.py &</code><br>
+<div class="thumbnail">
+	<img src="Bilder/Projekt4/beschreibung.jpg" title="Wifi-Butler" alt="Bild konnte nicht geladen werden." style="width:100%">
+	<div class="caption">
+	<p>Bash-Skript</p>
+	</div>
+</div>
+<br>Um schlussendlich noch denn SSH-Daemon aus dem Gaestenetz 
+unerreichbar zu machen, kann der SSH-Port mit der Firewall fuer das 
+Wlan-Interface blockiert werden. Dies geschieht mit dem Kommando:
+<br><code>sudo iptables -I INPUT 1 -p tcp -i wlan0 --dport 22 -j DROP</code><br>
+Nun muss natuerlich noch einmal die Konfiguration der Firewall gespeichert werden:
+<br><code>sudo sh -c "iptables-save &gt; /etc/iptables.nat"</code><br>
+Workaround:
+Ich hatte bei meinem Projekt das Problem, dass hostapd nach dem 
+Systemstart zwar lief, d.h. der Service war aktiviert und warf auch 
+keine erkennbaren Fehler, dennoch war das WiFi-Netzwerk beim Scan nicht 
+zu finden, nach einem manuellen Neustart des Service mit systemctl war 
+dieser Fehler immer beseitigt, darum habe ich einen Service geschrieben,
+ der nach dem Systemstart 10 Sekunden wartet und dann hostapd nochmal 
+neu startet. Dieser kann mit folgender Datei angelegt werden:
+<br><code>sudo nano /etc/systemd/system/restart_hostapd.service</code><br>
+<div class="thumbnail">
+	<img src="Bilder/Projekt4/etc_systemd_system_restart_hostapd.service.png" title="Wifi-Butler" alt="Bild konnte nicht geladen werden." style="width:100%">
+	<div class="caption">
+	<p>etc_systemd_system_restart_hostapd.service</p>
+	</div>
+</div>
+Ausserdem muss noch das Skript mit dem Pfad 
+/root/.restart_hostapd.sh angelegt werden, dass vom Service 
+genutzt wird. Dies geschieht wieder mit Nano:
+<br><code>sudo nano /root/.restart_hostapd.sh</code><br>
+<div class="thumbnail">
+	<img src="Bilder/Projekt4/local1.jpg" title="Wifi-Butler" alt="Bild konnte nicht geladen werden." style="width:100%">
+	<div class="caption">
+	<p></p>
+	</div>
+</div>
+<datei>Die Dateien befinden sich wie ueblich im Anhang.</datei>
+Anschliessend muessen die beiden neuen Dateien noch ausfuehrbar gemacht werden:
+<br><code>sudo chmod +x /etc/systemd/system/restart_hostapd.service
+<br>sudo chmod +x /root/.restart_hostapd.sh</code><br>
+Nun muss Systemd noch angewiesen werden den Service beim Systemstart aufzurufen, dies geschieht mit folgendem Kommando:
+<br><code>sudo systemctl enable restart_hostapd</code><br>
+Nachdem ein neuer Service erstellt wurde muss Systemd auch noch 
+angewiesen werden die Services neu zu laden, dies geschieht mit 
+folgendem Kommando:
+<br><code>sudo systemctl daemon-reload</code><br>
+Um das System komplett zu updaten kann folgendes Kommando benutzt werden:
+<br><code>sudo apt update -y &amp;&amp; sudo apt upgrade -y &amp;&amp; sudo apt dist-upgrade -y &amp;&amp; sudo apt autoremove -y</code><br>
+Der waehrend dem Tutorial erklaerte Befehl um kivy zu updaten ist hier aber nicht enthalten.
+
+	<div class="row">
+
+			<div class="thumbnail">
+				<img src="Bilder/Projekt4/Wifi_Butler.jpg" title="Wifi-Butler" alt="Bild konnte nicht geladen werden." style="width:100%">
+				<div class="caption">
+				<p>Wifi-Butler</p>
+				</div>
+			</div>
+	</div>
+	
+	<div class="row">
+
+
+
+
+	</div>
+	
+	<hr>	
+	</div>
+	
+<!-- RECHTS -->
+        <div class="col-sm-4">
+          <h2 class="mt-4">Kontakt</h2><!-- ADRESSE -->
+          <address>
+			<strong>Teamprojekt Pi - Carsten</strong>
+            <br><abbr title="Email">Email:</abbr>
+            <a href="mailto:support_pi_projects@protonmail.com">support_pi_projects@protonmail.com</a>
+          </address>
+	<hr>
+<!-- ADRESSE ENDE -->
+<!-- PREISE TABELLE -->
+<div class="table-responsive">
+  <caption><h3>Material-/Preisliste</h3></caption>
+<table class="table table-bordered">
+  <thead>
+    <tr>
+      <th scope="col">Material</th>
+	  <th scope="col">Menge</th>
+	  <th scope="col">Wo zu finden</th>
+      <th scope="col">Preis</th>
+    </tr>
+  </thead>
+  <br>Für dieses Projekt brauchst du mindestens einen pi 3 A
+  <tbody>
+    <tr>
+      <th scope="row">Touchscreen Display</th>
+	  <td>1</td>
+	  <td><a href="https://www.amazon.de/Raspberry-Pi-Touchscreen-Display-Geh%C3%A4use/dp/B01M0AT5O5/ref=sr_1_5?__mk_de_DE=%C3%85M%C3%85%C5%BD%C3%95%C3%91&crid=36YKO2FMSO070&keywords=raspi+touchscreen&qid=1570999276&sprefix=raspy+touch%2Caps%2C176&sr=8-5">Amazon</a>.</td>
+	  <td>ca90€</td>
+    </tr>
+  </tbody>
+</table>
+</div> <!-- PREISE TABELLE ENDE -->
+</div> 
+<!-- RECHTS ENDE -->
+
+</div>
+</div>
+    <!-- Page Content ENDE -->
+
+    <!-- Footer -->
+    <footer class="py-5 bg-dark">
+      <div class="container">
+        <p class="m-0 text-center text-white">Copyright &copy; Samantha Isted 2020</p>
+		<a href="Impressum.html" class="btn btn-primary">Impressum</a>
+		<a href="Kontakt.html" class="btn btn-primary">Kontakt</a>
+      </div>
+      <!-- /.container -->
+    </footer>
+
+    <!-- Bootstrap core JavaScript -->
+    <script src="vendor/jquery/jquery.min.js"></script>
+    <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+
+  </body>
+
+</html>

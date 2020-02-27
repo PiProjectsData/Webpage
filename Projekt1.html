@@ -1,0 +1,409 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="">
+    <meta name="author" content="Samantha Isted">
+	<meta name="keywords" content="Raspberry,Raspberry Pi,Pi,Teamprojekt,HTWG,Hochschule,FH,Konstanz,Bodensee,Technik,Studieren, Universität,Informatik">
+	<link rel="shortcut icon" href="Bilder/icon_2.png" type="image/x-icon" />
+
+    <!-- Bootstrap core CSS -->
+    <link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Custom styles for this template -->
+    <link href="css/business-frontpage.css" rel="stylesheet">
+
+	<title>Raspberry Pi</title>
+	
+	<style>
+code { 
+  font-family: monospace;
+  background-color: black;
+  color: white;
+}
+</style>
+  </head>
+  <body>
+
+    <!-- Navigation -->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
+      <div class="container">
+        <a class="navbar-brand" href="index.html"><img id="logo" src="Bilder/icon.jpeg" alt="logo"></a> <!-- statt index.html einfach /-->
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarResponsive">
+          <ul class="navbar-nav ml-auto">
+		  <li class="nav-item">
+              <a class="nav-link" href="index.html">Startseite</a>
+            </li>
+			<li class="nav-item">
+              <a class="nav-link" href="Projekte.html">Projekte</a>
+            </li>
+			<li class="nav-item">
+              <a class="nav-link" href="Galerie.html">Galerie</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="Kontakt.html">Kontakt</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+
+  <!-- Page Content -->
+    <div class="container">
+      <div class="row">
+        <div class="col-sm-8">
+          <h2 class="mt-4">Projekt 1 LED Matrix</h2>
+		  <h3>Bunt am nächsten.</h3>
+			<p>In diesem Projekt werden wir an einem Pi arbeiten, auf dem eine LED Matrix von UnicornHAT steckt.
+			<br>Bearbeitungsdauer mit Tutorial etwa: 1-3 Stunden<br>
+			Bevor wir aber dieses Projekt anfangen schau dir das Tutorial an: 
+			<br><a class="btn btn-primary btn-lg" href="Tutorial.html">Tutorial &raquo;</a>
+			
+		<br><br><h3>Hier ein kleiner Vorgeschmack wie es am Ende aussehen <strong>kann</strong>:</h3>
+
+			<div class="col-md-6">		
+				<video src="Bilder/Projekt1/Projekt1_vid.mp4" controls>
+				Ihr Browser kann dieses Video nicht wiedergeben.<br/>
+				Dieser Film zeigt eine Demonstration des video-Elements. 
+				</video>
+			</div>
+			<div class="col-md-6">		
+				<video src="Bilder/Projekt1/3.mp4" controls>
+				Ihr Browser kann dieses Video nicht wiedergeben.<br/>
+				Dieser Film zeigt eine Demonstration des video-Elements. 
+				</video>
+			</div>
+	
+		<video src="Bilder/Projekt1/vid_1.mp4" controls>
+		Ihr Browser kann dieses Video nicht wiedergeben.<br/>
+		Dieser Film zeigt eine Demonstration des video-Elements. 
+		</video>	
+
+		<br>
+		<h4>Die Software</h4>
+		Für dieses Projekt sollte vorhanden sein:
+		<br>- Python (ist standartmäßig schon installiert)
+		<br>- unicornhat aus Github.<a href="https://github.com/pimoroni/unicorn-hat">Anleitung</a> oder einfach im Terminal eingeben:
+		<br><code>sudo apt-get install python3-pip python3-dev<br>sudo pip3 install unicornhat</code>
+		<br>Weitere Informationen dazu gibt es <a href="https://learn.pimoroni.com/tutorial/unicorn-hat/getting-started-with-unicorn-hat">hier</a>
+		<h4>Die Hardware</h4>
+		Also zuerst nehmen wir unseren Pi mit der Led Matrix vor uns. 
+		Stecke die Matrix vorsichtig so wie auf dem Bild auf die 40 Pins. 
+		Achte darauf, dass es nicht falsch herum ist. Das gilt für egal welche Matrixgröße ihr euch entschieden habt. 
+		Das sollte dann ungefähr so aussehen: 
+		<div class="row">
+			<div class="col-md-6">
+			  <div class="thumbnail">
+				  <img src="Bilder/Projekt1/Projekt1_2.jpeg" title="LED_Matrix" alt="Bild konnte nicht geladen werden." style="width:100%">
+				  <div class="caption">
+					<p>LED Matrix 4x8 auf Pi</p>
+				  </div>
+			  </div>
+			</div>
+			<div class="col-md-6">
+			  <div class="thumbnail">
+				  <img src="Bilder/Projekt1/Projekt1_3.jpeg" title="LED_Matrix" alt="Bild konnte nicht geladen werden." style="width:100%">
+				  <div class="caption">
+					<p>LED Matrix 8x8 auf Pi</p>
+				  </div>
+			  </div>
+			</div>		
+		</div>
+		Damit aber auch etwas auf der LED Matrix leuchtet müssen wir selbst ein Programm schreiben. 
+		Mit Rechtsklick auf dem Desktop vom Pi (neu -> geany)(new -> empyt file) öffnen wir einen Editor, in dem wir schreiben können. Oder wir benutzen wie im Tutorial beschrieben nano.
+		Kopiere den folgenden Code rein und drücke auf Speichern. Nenne es "heart.py". Code:
+		(Tipp: öffne diese Webseite dazu auf deinem Pi und ziehe mit geklickter Maus über die schwarzen Zeilen. Wenn alles blau makiert ist, 
+		drücke auf deiner Tatstatur Strg und dann C. Dann zum Editor zurück und Strg und V drücken.)
+		<div class="row">
+			<div class="col-md-6">
+			  <div class="thumbnail">
+				  <img src="Bilder/Projekt1/7.jpeg" title="LED_Matrix" alt="Bild konnte nicht geladen werden." style="width:100%">
+				  <div class="caption">
+					<p>Datei erstellen</p>
+				  </div>
+			  </div>
+			</div>
+			<div class="col-md-6">
+			  <div class="thumbnail">
+				  <img src="Bilder/Projekt1/4.jpeg" title="LED_Matrix" alt="Bild konnte nicht geladen werden." style="width:100%">
+				  <div class="caption">
+					<p>Editor</p>
+				  </div>
+			  </div>
+			</div>		
+		</div>
+			<div class="col-md-6">
+			  <div class="thumbnail">
+				  <img src="Bilder/Projekt1/2.jpeg" title="LED_Matrix" alt="Bild konnte nicht geladen werden." style="width:100%">
+				  <div class="caption">
+					<p>Datei</p>
+				  </div>
+			  </div>
+			</div>			
+<h4>Code für LED Matrix 4x8 - "heart.py"</h4>
+Das ist der Code mit dem wir anfangen werden.		
+<br><code>#!/usr/bin/env python
+<br>import time
+<br>import unicornhat as unicorn
+<br><br>print("""heart.py Der Pi leuchtet jetzt.""")
+<br>
+<br>unicorn.set_layout(unicorn.AUTO)
+<br>unicorn.rotation(0)
+<br>unicorn.brightness(0.5)
+<br>width,height=unicorn.get_shape()
+<br>#Herz blau
+<br>unicorn.set_pixel(0,0,0,0,0)
+<br>unicorn.set_pixel(0,1,0,0,0)
+<br>unicorn.set_pixel(0,2,0,0,255)
+<br>unicorn.set_pixel(0,3,0,0,0)
+<br>unicorn.set_pixel(1,0,0,0,0)
+<br>unicorn.set_pixel(1,1,0,0,255)
+<br>unicorn.set_pixel(1,2,0,0,255)
+<br>unicorn.set_pixel(1,3,0,0,255)
+<br>unicorn.set_pixel(2,0,0,0,255)
+<br>unicorn.set_pixel(2,1,0,0,255)
+<br>unicorn.set_pixel(2,2,0,0,255)
+<br>unicorn.set_pixel(2,3,0,0,0)
+<br>unicorn.set_pixel(3,0,0,0,0)
+<br>unicorn.set_pixel(3,1,0,0,255)
+<br>unicorn.set_pixel(3,2,0,0,255)
+<br>unicorn.set_pixel(3,3,0,0,255)
+<br>unicorn.set_pixel(4,0,0,0,0)
+<br>unicorn.set_pixel(4,1,0,0,0)
+<br>unicorn.set_pixel(4,2,0,0,255)
+<br>unicorn.set_pixel(4,3,0,0,0)
+<br>unicorn.show()
+<br>time.sleep(2)
+</code>
+<br>
+Nachdem du den Code gespeichert hast musst du zum Ausführen den Terminal öffnen und mit ls und cd zum Desktop, 
+bzw zu dem Ort, wo die Datei liegt, gehen. Gebe dann ein: <br><code>sudo Python heart.py</code><br>
+Dann sollte das im Terminal ausgegeben werden: "heart.py Der Pi leuchtet jetzt." und auf der LED Matrix ein blaues Herz aufleuchten.
+<br><br>
+Nachdem du dein Herz mit Freude begutachtet hast gehen wir den Code mal durch. Die ersten 3 Zeilen ignorieren wir einfach mal.
+Das <code>print</code> ist dafür da, dass wir wenn wir das Programm ausführen auf dem Terminal etwas ausgeben können. 
+Hier sehen wir ob es läuft und mit welchem Programm. 
+Dieses hier heißt "heart.py". Es ist einfach eine Bestätigungsnachricht für uns, die man jederzeit ändern kann.
+Du kannst innerhalb der "" deinen Namen schreiben zB: 
+<br><code>print("Ich bin Lena.\n Und habe mit Python ein Herz auf dem Raspberry Pi programmiert.")</code>
+<br>Tipp: Wenn du das Programm änderst und kannst du zum Speichern Strg und S drücken.<br>
+Im Terminal kannst du einfach mit den Pfeiltasten nach oben und unten duch deine letzten Befehle durchgehen. Dann musst du nicht jeden Befehl nochmal eintippen.
+<br><br>Wichtig für uns ist erst ab Zeile 10. Das <code>unicorn.set_pixel(0,0,0,0,0)</code> setzt den Pixel (0,0) auf der Matrix (Koordinatensystem) auf den Wert (0,0,0).
+Das heißt unser erster Pixel, der bei x = 0 und y = 0 liegt, ist komplett aus, weil wir ihm keine Lichtwerte geben. Die drei Zahlen stehen für R = Rot, G = Grün, B = Blau.
+Und die Zahlen können von 0 bis 255 gehen. Das heißt von ganz aus bis volle Intensität. Zum Vergleich was wir zwei Zeilen drunter sehen, <code>unicorn.set_pixel(2,0,0,0,255)</code>
+färbt den Pixel an Stelle x=2, y=0 zu r=0,g=0,b=255 --> also Blau.
+Zb ist dann 255,0,255 Lila, weil wir die volle Intensität von Rot und Blau nehmen. Wenn sie beide gleichzeitig leuchten, nimmt unser Auge eine Mischfarbe wahr, nämlich Lila.
+<br><br><h4>Aufgabe für dich:</h4>
+Welcher RGB-Wert wäre dann die Farbe Grün oder Gelb?
+<br>Welche Farbe ist bei 255,69,0?
+<br>Probiere mal für die Farbwerte verschiedene Zahlen aus. 
+Dazu kannst du auch auf dieser Webseite sehen wie man die Farben mischt: <a href="https://www.rapidtables.com/web/color/RGB_Color.html">RGB Color Codes Chart</a> oder hier <a href="http://www.farb-tabelle.de/de/farbtabelle.htm">Farbtabelle</a>.
+<br>Das <code>time.sleep(2)</code> ist zuständig, wie lange das Herz angezeigt wird. Wenn du also mal statt 2 eine 5 oder 0.3 machst, wirst du einen Unterschied sehen. Welchen?
+<br>Und damit man überhaupt etwas sehen kann ist der <code>unicorn.show()</code> Befehl zuständig. Das heißt, wenn du den um paar Zeilen weiter nach oben verschiebst, 
+wird man das was danach kommt nicht sehen, weil er nur das zeigt, was zu diesem Zeitpunkt gesetzt ist.
+<br> Soooo deine nächste Aufgabe ist zu überlegen was passiert, wenn wir die Zeilen, an der für RGB nur 0 steht, weg machen. Wird das Herz dann immer noch richtig ausgegeben?
+<br> Ja und somit sparen wir auch Platz bzw Code. Das heißt Die LEDS sind defaultmäßig / standartmäßig aus.
+<br>Tu mal den Code vom ersten unicorn.setPixel bis time.sleep kopieren und setze dort eine andere Farbe rein. Was passiert?
+<br>Das Herz wird zwei mal in verschiedenen Farben hintereinander leuchten. Das heißt unser Programm arbeitet sich von oben nach unten durch.
+<br><br>
+Jetzt wissen wir so ziemlich viel um etwas auf der Led Matrix auszugeben. Jetzt bist du dran!
+Nehm am besten ein kariertes Blatt vor dich und zeichne die Größe der Matrix nach. (4x8 oder 8x8 Kästchen)
+Jetzt kannst du darin ein Bild mit sogar alles Farben sozusagen malen und dann auf deine LED Matrix projezieren. Dazu einfach Pixel für Pixel durchgegen und die Farbe setzen.
+Zum Beispiel: Zahlen, Buchstaben, Smileys, Katzenkopf, Regenbogen, Pixelart.
+<br>Viel Erfolg! :D
+<br><br>
+<h4>Programmierkenntnisse Erweitern</h4>
+Hast du dich gut in den Quellcode eingelebt? Dann können wir den nächstesn Schritt wagen und den Code vereinfach, was aber nicht automatisch einfach zu verstehen ist. 
+Stellt euch vor ihr habt einen Stuhl. Auf diesem Stuhl kann immer jemand draufsitzen. Aber ihr wisst nicht wer. 
+Aber ihr wisst, dass da immer jemand beim Essen draufsitzt. Das heißt wir programmieren sozusagen diesen Stuhl.
+Das wäre dann eine Variable. Ähnlich wie im Matheunterricht das x. 
+Also nehmen wir zb wenn wir das blaue Herz nehmen alle 255 raus und schreiben "wert" hin. Oben schreiben wir dann <code>wert = 255</code> hin.
+Somit wird sich das Programm jedes mal wenn er wert sieht schauen welchen Wert das hat.
+Wenn ihr es richtig gemacht habt sollte es wie davor funktioniert haben.
+<br>
+Mit dem Schritt haben wir eine Variable erstellt und ihr den Namen wert und den Wert 255 gegeben.
+Das wäre also vergleichbar mit: Wir haben einen Stuhl erstellt und haben Papa draufgesetzt.
+Aber jetzt kann nur Papa draufsitzen, weil er nicht mehr gebeten wird aufzustehen. 
+Wenn du wieder das Herz kopierst und unter dem anderen einfügst, kannst du vor dem zweiten sagen, dass Mama drauf sitzen soll.
+Das heißt wir machen <code>wert = 50</code>.
+<br>Jetzt haben wir das Verständnis für eine Variable erlernt. 
+Ganz cool wird das dann, wenn wir 3 Variablen erstellen. Rot, Grün und Blau. Achte darauf, dass Variablennamen immer klein geschrieben sind.
+Besser wäre sogar, wenn wir r für Rot, g für Grün und b für Blau nehmen.
+also ersetzten wir alle 3.4. und 5. Zahl mir r, g, b. Zum Beispiel = <code>unicorn.set_pixel(3,2, r,g,b)</code>
+Jetzt müssen wir die Variablen mit einem Wert definieren. Zum Beispiel <br><code>r = 255<br>g = 212<br>b = 0</code><br> Achte darauf, dass das vor dem Benutzen steht. 
+Sonst weiß das Programm zu diesem Zeitpunkt nicht, welchen Wert die Variable hat und gibt einen Fehler aus.
+<br><br>
+Wenn das gut geklappt hat können wir eine <strong>Schleife</strong> erstellen.
+<br>Ihr merkt bestimmt, dass die ersten zwei Zahlen (x und y) sich nicht viel unterscheiden.
+Und zwar geht es einmal von 0 bis 3 und von 0 bis 7. Nicht mehr und auch nicht weniger. Das ist die Größe der Matrix
+Das heißt wir machen einmal die Variable x und die Variable y.
+indem wir diesen Code einfügen:
+<br><code>for x in range (0-3): 
+<br>&nbsp; for y in range (0-7):
+<br>&nbsp; &nbsp; unicorn.set_pixel(x,y,r,g,b)
+</code>
+<br>Sehr sehr wichtig ist, dass es richtig eingerückt ist. 
+<br>
+Um deine Python Kenntnisse zu erweitern kannst du if, else und arrays lernen.
+"If - else" heißt soviel wie "falls - ansonsten".
+Mit einem array können wir das Herz etwas anders definieren.
+Auch sind Objekte und Gui möglich um während der Laufzeit zu entscheiden, was auf der Matrix ausgegeben werden soll.
+Natürlich kann die LED Matrix noch mehr: <a href="http://docs.pimoroni.com/unicornhat/">Mehr über unicorn lernen.</a>
+<br><h4>Sonstige Erweiterungen</h4>
+Man kann zusätzlich (für 8x8 Matrix) einen Diffuser drucken lassen. Das ist ein Gitter um die Pixel zu rastern.
+Dazu ist ein 3D-Drucker nötig. Siehe hier die <a href="https://www.thingiverse.com/thing:1668476">Durckvorlage</a>
+Dann muss noch eine Plexiglasscheibe zur Vollendung draufgeklebt werden. Somit wird ein Pixeliger Effekt erstellt, den ihr von Tetris bestimmt kennt.
+<br>
+	<div class="row">
+		<div class="col-md-6">
+		  <div class="thumbnail">
+			  <img src="Bilder/Projekt1/15.jpg" title="LED_Matrix" alt="Bild konnte nicht geladen werden." style="width:100%">
+			  <div class="caption">
+				<p>Diffuser und Plexiglas</p>
+			  </div>
+		  </div>
+		<div class="col-md-6">
+		  <video src="Bilder/Projekt1/vid_2.mp4" controls>
+			Ihr Browser kann dieses Video nicht wiedergeben.<br/>
+			Dieser Film zeigt eine Demonstration des video-Elements. 
+			</video>
+			</div>
+		</div>	
+	</div>		
+	<div class="row">
+		<div class="col-md-6">
+		  <div class="thumbnail">
+			  <img src="Bilder/Projekt1/17.jpg" title="LED_Matrix" alt="Bild konnte nicht geladen werden." style="width:100%">
+			  <div class="caption">
+				<p>Pixeleffekt</p>
+			  </div>
+		  </div>
+		</div>
+		<div class="col-md-6">
+		  <div class="thumbnail">
+			  <img src="Bilder/Projekt1/16.jpg" title="LED_Matrix" alt="Bild konnte nicht geladen werden." style="width:100%">
+			  <div class="caption">
+				<p>Pixeleffekt</p>
+			  </div>
+		  </div>
+		</div>
+	</div>
+Auch kann man ein Erweiterungsteil kaufen oder selbstlöten um die Matrix senkrecht auf dem Pi stecken zu können.
+	<div class="row">
+		<div class="col-md-6">
+		  <div class="thumbnail">
+			  <img src="Bilder/Projekt1/10.jpg" title="LED_Matrix" alt="Bild konnte nicht geladen werden." style="width:100%">
+			  <div class="caption">
+				<p>Erweiterungsteil fertig gelötet</p>
+			  </div>
+		  </div>
+		</div>
+		<div class="col-md-6">
+		  <div class="thumbnail">
+			  <img src="Bilder/Projekt1/12.jpg" title="LED_Matrix" alt="Bild konnte nicht geladen werden." style="width:100%">
+			  <div class="caption">
+				<p>Erweiterungsteil beim Löten</p>
+			  </div>
+		  </div>
+		</div>
+	</div>
+</div>
+		
+<!-- RECHTS -->		
+    <div class="col-sm-4">
+          <h2 class="mt-4">Kontakt</h2>
+          <address>
+            <strong>Teamprojekt Pi - Samantha Isted</strong>
+            <br><abbr title="Email">Email:</abbr>
+            <a href="mailto:sammy_isted@t-online.de">sammy_isted@t-online.de</a>
+          </address>
+<hr>
+<!-- PREISE TABELLE -->
+<div class="table-responsive">
+  <caption><h3>Material-/Preisliste</h3></caption>
+  Für dieses Projekt brauchst du entweder die 8x4 oder 8x8 LED Matrix und einen Pi 3+
+<table class="table table-bordered">
+  <thead>
+    <tr>
+      <th scope="col">Material</th>
+	  <th scope="col">Menge</th>
+	  <th scope="col">Wo zu finden</th>
+      <th scope="col">Preis</th>
+    </tr>
+  </thead>
+  <tbody>
+	<tr>
+      <th scope="row">LED Matrix 4x8</th>
+	  <td>1</td>
+	  <td><a href="https://shop.pimoroni.com/products/unicorn-phat">Pimoroni</a></td>
+	  <td>ca 12€</td>
+    </tr>
+	<tr>
+      <th scope="row">LED Matrix 8x8</th>
+	  <td>1</td>
+	  <td><a href="https://shop.pimoroni.com/products/unicorn-hat">Pimoroni</a></td>
+	  <td>ca 25€</td>
+    </tr>
+  </tbody>
+</table>
+</div>
+ <!-- PREISE TABELLE ENDE -->
+    </div>
+<!-- RECHTS ENDE -->      
+	  
+<!-- CARDS 	
+      <div class="row">
+        <div class="col-sm-4 my-4">
+          <div class="card">
+            <a href="Projekt1.html"> <img class="card-img-top" src="Bilder/Projekt1/Projekt1_1.jpeg" alt=""> </a>
+            <div class="card-body">
+              <h4 class="card-title">Projekt LED Matrix</h4>
+              <p class="card-text">
+			  <strong>Bunt</strong>.<br>Schwierigkeitsgrad: 1 Stern</p>
+            </div>
+            <div class="card-footer">
+              <a href="Projekt1.html" class="btn btn-primary">Zum Projekt</a>
+            </div>
+          </div>
+		  </div>
+		<div class="col-sm-4 my-4">            
+		<div class="card">
+            <a href="Projekt1.html"> <img class="card-img-top" src="Bilder/Projekt1/Projekt1_1.jpeg" alt=""> </a>
+            <div class="card-body">
+              <h4 class="card-title">Projekt LED Matrix</h4>
+              <p class="card-text">
+			  <strong>Bunt</strong>.<br>Schwierigkeitsgrad: 1 Stern</p>
+            </div>
+            <div class="card-footer">
+              <a href="Projekt1.html" class="btn btn-primary">Zum Projekt</a>
+            </div>
+          </div>
+        </div>
+		</div>
+<!-- CARDS ENDE -->	 
+
+</div>
+</div>
+<!-- Page Content ENDE-->
+
+    <!-- Footer -->
+    <footer class="py-5 bg-dark">
+      <div class="container">
+        <p class="m-0 text-center text-white">Copyright &copy; Samantha Isted 2020</p>
+		<a href="Impressum.html" class="btn btn-primary">Impressum</a>
+		<a href="Kontakt.html" class="btn btn-primary">Kontakt</a>
+      </div>
+      <!-- /.container -->
+    </footer>
+
+    <!-- Bootstrap core JavaScript -->
+    <script src="vendor/jquery/jquery.min.js"></script>
+    <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+
+  </body>
+
+</html>

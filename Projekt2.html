@@ -1,0 +1,407 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="">
+    <meta name="author" content="Samantha Isted">
+	<meta name="keywords" content="Raspberry,Raspberry Pi,Pi,Teamprojekt,HTWG,Hochschule,FH,Konstanz,Bodensee,Technik,Studieren, Universität,Informatik">
+	<link rel="shortcut icon" href="Bilder/icon_2.png" type="image/x-icon" />
+
+    <!-- Bootstrap core CSS -->
+    <link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Custom styles for this template -->
+    <link href="css/business-frontpage.css" rel="stylesheet">
+
+	<title>Raspberry Pi</title>
+	<style>
+	code{
+	  background-color: rgb(220,220,220);
+	}
+	</style>
+  </head>
+  <body>
+
+    <!-- Navigation -->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
+      <div class="container">
+        <a class="navbar-brand" href="index.html"><img id="logo" src="Bilder/icon.jpeg" alt="logo"></a> <!-- statt index.html einfach /-->
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarResponsive">
+          <ul class="navbar-nav ml-auto">
+		  <li class="nav-item">
+              <a class="nav-link" href="index.html">Startseite</a>
+            </li>
+		  	<li class="nav-item">
+              <a class="nav-link" href="index.html">Startseite</a>
+            </li>
+			<li class="nav-item">
+              <a class="nav-link" href="Projekte.html">Projekte</a>
+            </li>
+			<li class="nav-item">
+              <a class="nav-link" href="Galerie.html">Galerie</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="Kontakt.html">Kontakt</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+
+  <!-- Page Content -->
+    <div class="container">
+      <div class="row">
+        <div class="col-sm-8">
+          <h1 class="mt-4">Projekt 2 Theremin</h1>
+		  <h4>Melodische Klänge.</h4>
+			<p>In diesem Projekt werden wir mit Ultrasonic ein Theremin basteln.
+			<br>Bevor wir aber dieses Projekt anfangen schau dir das Tutorial an: <a class="btn btn-primary btn-lg" href="Tutorial.html">Tutorial &raquo;</a><br>
+		<br><h3>Hier ein kleiner Vorgeschmack wie es am Ende aussieht:</h3>
+		<video src="Bilder/Projekt2/Projekt2_vid1.mp4" controls>
+		Ihr Browser kann dieses Video nicht wiedergeben.<br/>
+		Dieser Film zeigt eine Demonstration des video-Elements. 
+		</video>
+		<video src="Bilder/Projekt2/Projekt2_vid2.mp4" controls>
+		Ihr Browser kann dieses Video nicht wiedergeben.<br/>
+		Dieser Film zeigt eine Demonstration des video-Elements. 
+		</video>   
+			
+<h2>Sonic Pi - Musik Programmieren</h2>
+	<p>
+		Traditionelle Musikinstrumente wie Klavier, Gitarre, und Schlagzeug erzeugen verschiedene Klangfarben und Töne, die bei der Erzeugung von Liedern bekannt sind. Leider haben die meistens Personen sowohl den Zugriff auf diese Instrumente als auch die Fähigkeit diese zu spielen. Heutzutage gibt es aber eine einfachere Lösung nämlich: digitale Synthesizer, die es ermöglicht,  Töne aus viele Instrumenten digital zu erzeugen. Eine bekannte Softwareanwendung ist Sonic Pi, die wir in diesem Projekt benutzen, um ein Lied zu erzeugen. Sonic Pi ist eine Applikation, die auf Windows, MacOS, und Raspberry Pi verfügbar ist. Wir werden diese Sonic Pi auf unserem Raspberry Pi installieren.
+	</p>
+
+	<h2>Sonic Pi installieren</h2>
+	<ul>
+		<li>
+			<p>
+				Als erster Schritt müssen wir unser System aktualisieren. Dafür brauchen wir ein Tool: Terminal. Terminal ist eine textbasierte Ein-/Ausgabe-Schnittstelle für ein Computersystem. Wir können hier Befehle eingeben, um das System zu steuern oder Dateien zu bearbeiten. 
+				Um dieses Terminal zu finden, können wir die schwarze Box neben dem Raspberry Pi – Symbol klicken. So sieht ein Terminal aus: 
+			</p>
+
+			<img src="Bilder/Tutorial/tut_terminal.jpg" width="60%">
+		</li>
+		<li>
+			<p>
+				Unten ist der Befehl zum Aktualisieren:</br></br>
+
+				<code style="background-color: rgb(220,220,220)">sudo apt update && sudo apt upgrade -y</code> </br></br>
+
+				Es kann bis zu mehr als fünf Minute dauern. Wenn der grüne Text <code style="background-color: rgb(220,220,220)">pi@rasberrypi:~$</code>  wieder erscheint, ist der Vorgang fertig.
+			</p>
+		</li>
+		<li>
+			<p>
+				Wir können jetzt Sonic Pi installieren. Führe den unteren Befehl aus:</br></br>
+
+				<code style="background-color: rgb(220,220,220)">sudo apt-get install sonic-pi</code>
+			</p>
+		</li>
+		<li>
+			<p>
+				Wenn die Installation fertig ist, klicke auf Raspberry Pi - Symbol. Unter Entwicklung findest du Sonic Pi. Unser Sonic Pi ist bereits!
+			</p>
+
+			<img src="Bilder/Projekt2/sonicPi_welcome.png" width="80%">
+		</li>
+	</ul>
+
+	<h2>Mit Sonic Pi starten!</h2>
+
+	<ul>
+		<li>
+			<p>
+			Um eine Musiknote zu erzeugen können wir die untere Zeile eingeben:</br></br>
+
+			<code style="background-color: rgb(220,220,220)">play 60</code></br></br>
+			
+			Klicke auf Run Symbol und voila! Du hast deine erste Note programmiert!</br></br>
+			Du kannst die Zahl mit jeder runden Zahl ersetzen! Probiere das aus! Beobachte welche Zahlen erzeugen welche Note? Kannst du die Noten erkennen?</br></br>
+			Hier sind Tabelle von Sonic Pi, welche Zahl erzeugt welchen Ton:</br></br>
+
+			<img src="Bilder/Projekt2/toene.png" width="60%">
+			</p>
+		</li>
+		<li>
+			<p>
+			Jetzt versuch mehrere Musiknoten zu erzeugen:</br></br>
+
+			<code style="background-color: rgb(220,220,220)">play 40</code></br>
+			<code style="background-color: rgb(220,220,220)">play 50</code></br>
+			<code style="background-color: rgb(220,220,220)">play 60</code></br></br>
+
+			Was ist passiert? Hast du alle Musiknoten klar gehört? Nein? Warum nicht?</br></br>
+			</p>
+		</li>
+		<li>
+			<p>
+			Die Antwort ist: Sonic Pi hat zwar alle Noten nach einander gespielt, aber es war leider zu schnell, die einzige Note klar zu erkennen. Eine Lösung dafür ist ein Zeitabstand! Das Prinzip ist gleich, wie wenn wir echte Instrumente spielen, dann müssen wir auch Zeitabstand haben, um die Noten richtig zu hören und damit schöne Melodie zu erzeugen!</br></br>
+
+			<code style="background-color: rgb(220,220,220)">play 40</code></br>
+			<code style="background-color: rgb(220,220,220)">sleep 1</code></br>
+			<code style="background-color: rgb(220,220,220)">play 50</code></br>
+			<code style="background-color: rgb(220,220,220)">sleep 1</code></br>
+			<code style="background-color: rgb(220,220,220)">play 60</code></br></br>
+
+			Genauso wie bei <code style="background-color: rgb(220,220,220)">play</code> kannst du die Zahl bei <code style="background-color: rgb(220,220,220)">sleep</code> mit irgendeiner Zahl ersetzen. Was passiert, wenn du große Zahl und kleine Zahl eingibst?
+			</p>
+		</li>
+		<li>
+			<p>
+			Jetzt können wir weiter synth experimentieren. Mit <code style="background-color: rgb(220,220,220)">synth</code> kannst du andere Töne und Klang von unterschiedlichen Musikinstrumenten und Effekte erzeugen lassen. Deine Noten können sich dann als Klavier, Gitarre, usw. anhören. Folgende sind ein paar Beispiele von <code style="background-color: rgb(220,220,220)">synth</code>, die du in deinem Programm verwenden kannst:</br></br>
+
+			<code style="background-color: rgb(220,220,220)">synth :pulse</code></br>
+			<code style="background-color: rgb(220,220,220)">play 40</code></br>
+			<code style="background-color: rgb(220,220,220)">sleep 1</code></br>
+			<code style="background-color: rgb(220,220,220)">play 50</code></br>
+			<code style="background-color: rgb(220,220,220)">sleep 1</code></br>
+			<code style="background-color: rgb(220,220,220)">play 60</code></br></br>
+
+			Hier sind noch andere Arte von <code style="background-color: rgb(220,220,220)">synth</code>, mit denen du weiter experimentieren kannst:</br></br>
+
+			<code style="background-color: rgb(220,220,220)">synth :growl</code></br>
+			<code style="background-color: rgb(220,220,220)">synth :vowel</code></br>
+			<code style="background-color: rgb(220,220,220)">synth :saw</code></br>
+			</p>
+		</li>
+		<li>
+			<p>
+			Believe it or not: ganz viele Lieder auf dieser Welt bestehen nur aus 4 Noten! Was heißt das dann für unseres Programm? Das heißt: Ein Lied lässt sich nur aus Repetition dieser Noten zusammensetzen. Um diese Repetition zu erzeugen, kann man den Befehl unten benutzen:</br></br>
+
+			<code style="background-color: rgb(220,220,220)">4.times do</code></br>
+			&nbsp;&nbsp;&nbsp;&nbsp;<code style="background-color: rgb(220,220,220)">play 40</code></br>
+			&nbsp;&nbsp;&nbsp;&nbsp;<code style="background-color: rgb(220,220,220)">sleep 1</code></br>
+			&nbsp;&nbsp;&nbsp;&nbsp;<code style="background-color: rgb(220,220,220)">play 50</code></br>
+			&nbsp;&nbsp;&nbsp;&nbsp;<code style="background-color: rgb(220,220,220)">sleep 1</code></br>
+			&nbsp;&nbsp;&nbsp;&nbsp;<code style="background-color: rgb(220,220,220)">play 60</code></br>
+			&nbsp;&nbsp;&nbsp;&nbsp;<code style="background-color: rgb(220,220,220)">sleep 1</code></br>
+			<code style="background-color: rgb(220,220,220)">end</code></br></br>
+
+			Die Zahl vor <code style="background-color: rgb(220,220,220)">times</code> kannst du mit anderer Zahl auch setzen. Je nachdem wie viele Repetition du machen willst. Versuch mal eine Repetition innerhalb anderer Repetition. Habt ihr die Syntax richtig hinbekommen? Welche Schwierigkeiten habt ihr dabei?
+			</p>
+		</li>
+		<li>
+			<p>
+			Außer diese exakt bestimmte Repetition können wir auch eine ewige Loop laufen lassen. Diese Loop wird für immer laufen solange das Programm/Applikation nicht gestoppt oder geschlossen ist! </br></br>
+
+			<code style="background-color: rgb(220,220,220)">loop do</code></br>
+			&nbsp;&nbsp;&nbsp;&nbsp;<code style="background-color: rgb(220,220,220)">play 40</code></br>
+			&nbsp;&nbsp;&nbsp;&nbsp;<code style="background-color: rgb(220,220,220)">sleep 1</code></br>
+			&nbsp;&nbsp;&nbsp;&nbsp;<code style="background-color: rgb(220,220,220)">play 50</code></br>
+			&nbsp;&nbsp;&nbsp;&nbsp;<code style="background-color: rgb(220,220,220)">sleep 1</code></br>
+			<code style="background-color: rgb(220,220,220)">end</code></br></br>
+
+			Diese <code style="background-color: rgb(220,220,220)">loop</code> wird bei dem nächsten Schritt gebraucht! Also merk es euch mal!
+			</p>
+		</li>
+	</ul>
+
+	<h1>Ultrasonic Theremin</h1>
+	<h2>Was ist überhaupt ein Theremin?</h2>
+
+	<p>
+	Theremin ist ein seltsames elektronisches Musikinstrument. Es ist das einzige berührungslose Musikinstrument. Sein Name geht auf den Erfinder, den Russen Lew Termen, zurück, der sich in den USA Leon Theremin nannte. Beim Theremin beeinflusst die elektrische Kapazität des menschlichen Körpers ein elektrisches Feld. Dabei steuert die Position der Hände gegenüber zwei Elektroden („Antennen“) die Stärke der Veränderung. Die sich ändernde Schwingung des Feldes wird verstärkt und als Ton über einen Lautsprecher ausgegeben. <a href="https://de.wikipedia.org/wiki/Theremin">Wikipedia</a>	
+	</p>
+
+	<img src="Bilder/Projekt2/thereministin.png" width="60%">
+
+			<br><h4>Was wirst du lernen?</h4>
+			In diesem Projekt wirst du einen Sensor besser kennenlernen. Was kannst du damit messen? Wie werden die aufgenommene Information weiter verarbeitet? Wie kann man Abstandsänderung mithilfe der „Ultrasonic Distance Sensor“ erkennen und messen? Wie können sich die Variablen zwischen Sonic Pi und Python kommunizieren?
+			<br><h4>Was ist ein Ultraschall Abstandssensor?</h4>
+			Es ist ein Sensor, der Ultraschallwellen losschickt und misst, indem die Gesamtzeit der Ultraschallwellen, die abgeprallt sind und zurückreflektiert wurden. Dieser Sensor kann bis zu ein Meter ziemlich genau messen. 			
+			
+
+	<br><br><h2>Hast du schon alles geholt?</h2>
+	<ul>
+		<li>
+		Die Hardware:</br>
+		<img src="Bilder/Projekt2/zutaten.png" width="60%"></br></br>
+		</li>
+		<li>
+			Die Software</br>
+			<ul>
+				<li>Python</li>
+				<li>Sonic Pi</li>
+			</ul>
+		</li>
+	</ul>
+
+	<h2>Hardwareaufbau</h2>
+	<p>Ein Ultraschall Abstandssensor hat vier Pins, nämlich: Ground (Gnd), Trigger (Trig), Echo (Echo) and Power (Vcc). Um den Sensor zu benutzen, musst du den Gnd-pin mit dem Ground-pin (GND), Trig-pin mit dem GPIO-pin und Vcc-pin mit dem 5V-pin auf dem Raspberry Pi verbinden. Es bleibt dann noch Echo-pin, der mit den 2 Resistoren und auch mit GPIO-pin auf dem Raspberry Pi verbunden werden muss.</p>
+
+	<p>Damit es noch einfacher zu verstehen, kannst du dir gerne das untere Bild anschauen. Der Resistor mit Zahl 1 darauf ist der Resistor 330 Ohm und der andere ist 470 Ohm.</p>
+
+	<p>So sieht das fertige Theremin aus:</p>
+	<img src="Bilder/Projekt2/circuite.png" width="60%"></br></br>
+
+	<h2>Softwareinstallation</h2>
+	<ol>
+		<li><p>Aktualisiere euer Betriebssystem</p>
+			<p><code style="background-color: rgb(220,220,220)">sudo apt update && sudo apt upgrade -y</code></p>
+		</li>
+		<li>
+			<p>Installiere Python von python-osc:</p>
+			<p><code style="background-color: rgb(220,220,220)">sudo pip3 install python-osc</code></p>
+		</li>
+		<li>
+			<p>Erstmal solltest du überprüfen, ob du dein Theremin richtig gebaut hast und ob der Abstandssensor einen richtigen Abstand gemessen hat. Öffne erstmal ein Editor für Python, unter Entwicklung, wähle Thonny Python IDE. Danach gib die unteren Codes ein:</p>
+			<p><img src="Bilder/Projekt2/detecting distance.png" width="60%"></p>
+			<p>Speicher erstmal die Datei ab und klicke auf Run. Beobachte, dass da so viele Ausgabe in der Konsole bzw. Shell rausgekommen sind. Die sind eigentlich die gemessenen Abstände, die unser Programm von dem Sensor erhalten haben. Hat der Sensor den Abstand richtig gemessen?</p>
+		</li>
+		<li>
+			<p>Jetzt müssen wir unser sogenannte receiver mit Sonic Pi einstellen. Öffne dein Sonic Pi wieder. Klicke auf Puffer 2 oder andere Puffer, die noch nicht benutzt ist und gib die untere Zeile ein:</p>
+
+			<p>
+			<code style="background-color: rgb(220,220,220)">live_loop :listen do</code></br>
+			&nbsp;&nbsp;&nbsp;&nbsp;<code style="background-color: rgb(220,220,220)">use_real_time</code></br>
+			&nbsp;&nbsp;&nbsp;&nbsp;<code style="background-color: rgb(220,220,220)">note = sync "/osc/play_this"</code></br>
+			&nbsp;&nbsp;&nbsp;&nbsp;<code style="background-color: rgb(220,220,220)">play note[0]</code></br>
+			<code style="background-color: rgb(220,220,220)">end</code></p>
+
+			<p>Klicke auf Run. Diese Loop bzw. Repetition versuchen die ganze Zeit die zu sich geschickte Infromation zu hören und es weiterverarbeiten.</p>
+		</li>
+		<li>
+			<p>Jetzt brauchen wir einen sender, der den Abstand von dem Sensor zu unserem Sonic Pi schicken. Öffne ein neues Python File und schreib die unteren Codes:</p>
+			<p>
+			<code>from gpiozero import DistanceSensor</br>
+			from time import sleep</br>
+			from pythonosc import osc_message_builder</br>
+			from pythonosc import udp_client</code></br>
+
+			<p>
+			<code>sensor = DistanceSensor(echo=17, trigger=4)</code></br>
+			<code>sender = udp_client.SimpleUDPClient('127.0.0.1', 4559)</code>
+			</p>
+			<p>
+			<code>while True:</code></br>
+			&nbsp;&nbsp;&nbsp;&nbsp;<code style="background-color: rgb(220,220,220)">pitch = round(sensor.distance * 100 + 30)</code></br>
+			&nbsp;&nbsp;&nbsp;&nbsp;<code style="background-color: rgb(220,220,220)">sender.send_message('/play_this', pitch)</code></br>
+			&nbsp;&nbsp;&nbsp;&nbsp;<code style="background-color: rgb(220,220,220)">sleep(0.1)</code>
+			</p>
+
+			<p>Jetzt können wir unsere Hand auf dem Sensor legen und weiter beobachten. Was ist passiert? Hörst du endlich Töne? Herzlicher Glückwunsch! Du hast jetzt dein eigenes Theremin</p>
+			</p>
+		</li>
+		<li>
+			<p>Nachdem das Python Programm den Abstand abgefangen hat, wird der Wert gerundet und zu unserem Sonic Pi geschickt.</p>
+		</li>
+		<li>
+			<p>Beobachte was passiert, wenn du deine Hand auf verschiedene Abstände setzt? Was ist passiert, wenn es nah oder weit ist? </p>
+		</li>
+	</ol>
+
+	<div class="row">
+    <div class="col-md-6">
+      <div class="thumbnail">
+          <img src="Bilder/Projekt2/Projekt2_1.jpeg" title="Theremin" alt="Bild konnte nicht geladen werden." style="width:100%">
+      </div>
+    </div>
+    <div class="col-md-6">
+      <div class="thumbnail">
+          <img src="Bilder/Projekt2/Projekt2_2.jpeg" title="Theremin" alt="Bild konnte nicht geladen werden." style="width:100%">
+      </div>
+    </div>
+	</div>
+	
+	<div class="row">
+    <div class="col-md-6">
+      <div class="thumbnail">
+          <img src="Bilder/Projekt2/Projekt2_3.jpeg" title="Theremin" alt="Bild konnte nicht geladen werden." style="width:100%">
+      </div>
+    </div>
+	</div>
+	
+	<hr>	
+	</div>
+	
+<!-- RECHTS -->
+        <div class="col-sm-4">
+          <h2 class="mt-4">Kontakt</h2><!-- ADRESSE -->
+          <address>
+			<strong>Teamprojekt Pi - Mangga</strong>
+            <br><abbr title="Email">Email:</abbr>
+            <a href="mailto:support_pi_projects@protonmail.com">support_pi_projects@protonmail.com</a>
+          </address>
+	<hr>
+<!-- ADRESSE ENDE -->
+<!-- PREISE TABELLE -->
+<div class="table-responsive">
+  <caption><h3>Material-/Preisliste</h3></caption>
+  Für dieses Projekt empfehlen wir ein Modell ab Pi3.
+<table class="table table-bordered">
+  <thead>
+    <tr>
+      <th scope="col">Material</th>
+	  <th scope="col">Menge</th>
+	  <th scope="col">Wo zu finden</th>
+      <th scope="col">Preis</th>
+    </tr>
+  </thead>
+  <tbody>
+	<tr>
+      <th scope="row">Sorderless Breadbroad (Experimentier-Steckboard)</th>
+	  <td>1</td>
+	  <td><a href="https://www.amazon.de/s?k=solderless+breadboard&__mk_de_DE=%C3%85M%C3%85%C5%BD%C3%95%C3%91&ref=nb_sb_noss">hier</a>.</td>
+	  <td>2-7€</td>
+    </tr>
+	<tr>
+      <th scope="row">330 Ohm Resistor</th>
+	  <td>1</td>
+	  <td><a href="https://www.amazon.de/s?k=330+ohm+resistors&__mk_de_DE=%C3%85M%C3%85%C5%BD%C3%95%C3%91&crid=1GTGY4W5480L4&sprefix=330+ohm+resist%2Caps%2C194&ref=nb_sb_ss_i_1_14">hier</a>.</td>
+	  <td>2€</td>
+    </tr>
+	<tr>
+      <th scope="row">470 Ohm Resistor</th>
+	  <td>1</td>
+	  <td><a href="https://www.amazon.de/s?k=470+ohm+resistors&__mk_de_DE=%C3%85M%C3%85%C5%BD%C3%95%C3%91&ref=nb_sb_noss">hier</a>.</td>
+	  <td>2€</td>
+    </tr>
+	<tr>
+      <th scope="row">Ultrasonic Distance Sensor (Ultraschall Abstandssensor)</th>
+	  <td>1</td>
+	  <td><a href="https://www.amazon.de/s?k=ultraschall+distanzsensor&__mk_de_DE=%C3%85M%C3%85%C5%BD%C3%95%C3%91&crid=24XL4181ZNE1A&sprefix=ultraschall+dista%2Caps%2C196&ref=nb_sb_ss_i_1_17">hier</a>.</td>
+	  <td>3-7€</td>
+    </tr>
+	<tr>
+      <th scope="row">männlich zu männlich Jumper Kabel</th>
+	  <td>3</td>
+	  <td><a href="https://www.amazon.de/s?k=m%C3%A4nnlich+zu+m%C3%A4nnlich+jumper+kabel&__mk_de_DE=%C3%85M%C3%85%C5%BD%C3%95%C3%91&crid=TJDKRKYPV2HK&sprefix=m%C3%A4nnlich+zu+m%2Caps%2C180&ref=nb_sb_noss">hier</a>.</td>
+	  <td>5-7€</td>
+    </tr>
+	<tr>
+      <th scope="row">männlich zu weiblich Jumper Kabel</th>
+	  <td>4</td>
+	  <td><a href="https://www.amazon.de/s?k=m%C3%A4nnlich+zu+m%C3%A4nnlich+jumper+kabel&__mk_de_DE=%C3%85M%C3%85%C5%BD%C3%95%C3%91&crid=TJDKRKYPV2HK&sprefix=m%C3%A4nnlich+zu+m%2Caps%2C180&ref=nb_sb_noss">hier</a>.</td>
+	  <td>5-7€</td>
+    </tr>
+  </tbody>
+</table>
+</div> <!-- PREISE TABELLE ENDE -->
+</div> 
+<!-- RECHTS ENDE --> 
+
+</div>
+</div>
+    <!-- Page Content ENDE -->
+
+    <!-- Footer -->
+    <footer class="py-5 bg-dark">
+      <div class="container">
+        <p class="m-0 text-center text-white">Copyright &copy; Samantha Isted 2020</p>
+		<a href="Impressum.html" class="btn btn-primary">Impressum</a>
+		<a href="Kontakt.html" class="btn btn-primary">Kontakt</a>
+      </div>
+      <!-- /.container -->
+    </footer>
+
+    <!-- Bootstrap core JavaScript -->
+    <script src="vendor/jquery/jquery.min.js"></script>
+    <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+
+  </body>
+
+</html>

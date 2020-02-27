@@ -1,0 +1,502 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8">
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="">
+    <meta name="author" content="Samantha Isted">
+	<meta name="keywords" content="Raspberry,Raspberry Pi,Pi,Teamprojekt,HTWG,Hochschule,FH,Konstanz,Bodensee,Technik,Studieren, Universität,Informatik">
+	<link rel="shortcut icon" href="Bilder/icon_2.png" type="image/x-icon" />
+
+    <!-- Bootstrap core CSS -->
+    <link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Custom styles for this template -->
+    <link href="css/business-frontpage.css" rel="stylesheet">
+
+	<title>Raspberry Pi</title>
+<style>
+code { 
+  font-family: monospace;
+  background-color: black;
+  color: white;
+}
+datei { 
+  background-color: lightblue;
+}
+</style>
+  </head>
+  <body>
+
+    <!-- Navigation -->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
+      <div class="container">
+        <a class="navbar-brand" href="index.html"><img id="logo" src="Bilder/icon.jpeg" alt="logo"></a> <!-- statt index.html einfach /-->
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarResponsive">
+          <ul class="navbar-nav ml-auto">
+		  <li class="nav-item">
+              <a class="nav-link" href="index.html">Startseite</a>
+            </li>
+			<li class="nav-item">
+              <a class="nav-link" href="Projekte.html">Projekte</a>
+            </li>
+			<li class="nav-item">
+              <a class="nav-link" href="Galerie.html">Galerie</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="Kontakt.html">Kontakt</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+
+  <!-- Page Content -->
+    <div class="container">
+      <div class="row">
+        <div class="col-sm-8">
+          <h2 class="mt-4">Der Raspberry Pi</h2>
+		  <h3>Tutorial</h3>
+			<p>Hier zeigen wir dir von Null an, wie du deinen Pi aufsetzt und nutzt, um die Projekte durchführen zu können. Für alle diese Projekte brauchst du einen Raspberry Pi.
+	
+	<div class="row">
+		<div class="col-md-6">
+		  <div class="thumbnail">
+			  <img src="Bilder/Tutorial/tut_1.jpeg" title="Tutorial_Pi" alt="Bild konnte nicht geladen werden." style="width:100%">
+			  <div class="caption">
+				<p>Der Raspberry Pi</p>
+			  </div>
+		  </div>
+		</div>
+		<div class="col-md-6">
+
+		</div>
+	</div>
+	
+	<div class="row">
+		<div class="col-md-6">
+		  <div class="thumbnail">
+			  <img src="Bilder/Tutorial/tut_3.jpeg" title="Tutorial_Pi" alt="Bild konnte nicht geladen werden." style="width:100%">
+		  </div>
+		</div>
+		<div class="col-md-6">
+		  <div class="thumbnail">
+			  <img src="Bilder/Tutorial/tut_2.jpeg" title="Tutorial_Pi" alt="Bild konnte nicht geladen werden." style="width:100%">
+		  </div>
+		</div>
+	</div>
+			<h4>Was ist ein Raspberry Pi?</h4>
+			Himbeer Kuchen?
+			<br>Ein Raspberry Pi kurz Pi ist ein Einplatinencomputer. Das heißt er besteht aus einer Platine (meistens grün) und mehrere Schnittstellen (Stecker). 
+			Das coole daran ist, dass man ihn mit Gadgets erweitern kann und ihn als ganz normalen Computer benutzen kann. Er wurde entwickelt, 
+			um Hardwarekenntnisse und das Programmieren zu lernen.
+			<br>Es gibt verschiedene Modelle. zero(0) bis 4. Umso größer die Zahl um so neuer. Wenn du noch keinen hast und du dir vorstellen kannst, 
+			dass du damit viel machen willst, oder auch recht aufwendiges, dann hol dir am besten einen neueren, 
+			denn die alten haben manchmal nicht genug Rechenleistung für gewisse Projekte oder besitzen manche Schnittstellen nicht wie HDMI oder den Wifi Adapter. 
+			Wir empfehlen für die derzeitigen Projekte einen Pi zu holen mit mindestens dem <strong>Modell 3a+</strong>. Ein Gehäuse ist optional, aber empfehlenswert.
+			<br><br><h4>Wo finde ich einen Raspberry Pi?</h4>
+			Ganz einfach unter <a href="https://www.amazon.de/s?k=Raspberry+pi&__mk_de_DE=%C3%85M%C3%85%C5%BD%C3%95%C3%91&ref=nb_sb_noss_2"> Amazon </a>
+			<br>oder bei <a href="https://shop.pimoroni.com/?q=raspberry+pi"> Pimodori </a>
+			<br>Du kannst dir natürlich auch gleich ein ganzes Starter-kit Set kaufen.
+			<br>Damit ein Raspberry Pi überhaupt läuft brauchst du Strom. Du brauchst ein Mikro-USB Kabel. Das ist das, was die derzeitigen Smartphones brauchen. (Das vor USB-C)
+			Am besten achtest du explizit darauf, dass es ein 2 Ampere Ladegerät ist. Manchmal sind sie beim Pi dabei, falls nicht gibt es <a href="https://www.amazon.de/Ladeger%C3%A4t-Netzteil-Micro-USB-Kabel-Samsung-Motorola-Wei%C3%9F/dp/B07YJGKPD9/ref=sr_1_3_sspa?__mk_de_DE=%C3%85M%C3%85%C5%BD%C3%95%C3%91&crid=1G3L1ZUWYJ121&keywords=2a+usb+ladeger%C3%A4t&qid=1582034182&sprefix=2+a+%2Caps%2C189&sr=8-3-spons&psc=1&spLa=ZW5jcnlwdGVkUXVhbGlmaWVyPUEzUU1UWlkzQzFKWVZIJmVuY3J5cHRlZElkPUExMDI3NjcyMjJMNUtWOEE4NzcwSyZlbmNyeXB0ZWRBZElkPUEwOTcxMDg5MkhBUUMxQjZGRFBSOSZ3aWRnZXROYW1lPXNwX2F0ZiZhY3Rpb249Y2xpY2tSZWRpcmVjdCZkb05vdExvZ0NsaWNrPXRydWU="> hier </a> welche. 
+			<br><br><h4>Wie erwecke ich meinen Pi zum Leben?</h4>
+			Das was dein Pi braucht ist ein Gedächtnis. So wie bei uns das Gehirn, was dem Körper sagt, was er machen soll. Das ist beim Pi das Betriebsystem kurz OS.
+			Das wird auf einer Mikro-SD-Karte installiert. 
+			Eine SD-Karte findest du <a href="https://www.amazon.de/Intenso-Micro-Class-Speicherkarte-SD-Adapter/dp/B008RDCCFS/ref=sr_1_5?__mk_de_DE=%C3%85M%C3%85%C5%BD%C3%95%C3%91&keywords=micro+sd+karte+8gb&qid=1582034607&sr=8-5"> Hier </a>. Achte am besten darauf, dass sie groß ist. (gut wäre 8GB, manchmal ist 4GB auch noch ok)
+			Jeder Computer hat so ein System und vermutlich verwendest du Zuhause Windows, welches eines der beliebtesten Betriebssysteme ist. 
+			Auf dem Raspberry PI werden wir ein Linux-System mit dem Namen “Raspbian” installieren. Linux ist kostenlos und braucht auch weniger Leistung als Windows und ist deshalb perfekt für unseren kleinen Computer geeignet.
+			Das heißt wir brauchen einen anderen Computer dazu, der das OS auf die SD-Karte macht(flasht).
+			<br>
+			<div class="thumbnail">
+			  <img src="Bilder/Tutorial/tut_5.jpeg" title="Tutorial_Pi" alt="Bild konnte nicht geladen werden." style="width:100%">
+			  <div class="caption">
+				<p>Eine 8GB große Mirko-SD-Karte für den Pi.</p>
+			  </div>
+		    </div>
+			<h4>Schritt 1: Mikro-SD Karte flashen</h4>
+			Es gibt zwei Varianten. Entweder man installiert Raspbian anhand Noobs siehe dazu (dabei kannst du paar Schritte hier überspringen):
+			<h5><a href="https://www.raspberrypi.org/documentation/installation/noobs.md">Noobs installieren</a></h5>
+			oder, wie in den nächsten Schritten beschrieben, mit Etcher.
+			<h5>Schritt 1.1: Etcher installieren</h5>
+			Stecke die Karte in deinen Computer und lade hierzu das Programm <a href="https://www.balena.io/etcher/"> “Etcher” </a> herunter. 
+			Es gibt eine “portable” und eine “installer” version, welche du nimmst ist im Prinzip egal. Um den Unterschied zu verstehen, hier eine kleines Beispiel:
+			Stell dir vor, du willst dein Zimmer heizen, hast aber keine Heizung. 
+			Die “installer” Methode würde bedeuten dass du einen Heizungsbauer kommen lässt welcher dir eine Heizung in dein Zimmer einbaut. Die "portable" Methode würde bedeuten dass du einfach einen Heizlüfter in dein Zimmer stellst welchen man danach wieder verräumen kannst
+			<br>
+			<div class="thumbnail">
+			  <img src="Bilder/Tutorial/tut_13.jpeg" title="Tutorial_Pi" alt="Bild konnte nicht geladen werden." style="width:100%">
+			  <div class="caption">
+				<p>Etcher für Windows runterladen.</p>
+			  </div>
+			</div>
+			Drücke auf den grünen Knopf "Download for Windows (x86|x64)". Dann ploppt ein Fenster auf. Drücke auf "Datei speichern".
+			Dann wirst du vermutlich einen blauen Pfeil ganz oben rechts sehen. Der zeigt dir an, wie lange die Datei noch runterladen muss.
+			<div class="thumbnail">
+			  <img src="Bilder/Tutorial/tut_14.png" title="Tutorial_Pi" alt="Bild konnte nicht geladen werden." style="width:100%">
+			  <div class="caption">
+			  <p>Etcher wird gedownloaded.</p>
+			  </div>
+			</div>
+			Öffne nach dem Download die Datei. Entwerder im Browser, so wie auf dem Bild oder direkt vom Downloadordner des Pcs. 
+			Auf "Ausführen" und "Annehmen" drücken.
+			<div class="thumbnail">
+			  <img src="Bilder/Tutorial/tut_16.jpg" title="Tutorial_Pi" alt="Bild konnte nicht geladen werden." style="width:100%">
+			  <div class="caption">
+			  <p>Ausführen.</p>
+			  </div>
+			</div>
+			<div class="thumbnail">
+			  <img src="Bilder/Tutorial/tut_15.png" title="Tutorial_Pi" alt="Bild konnte nicht geladen werden." style="width:100%">
+			  <div class="caption">
+			  <p>Etcher download fertg. Jetzt starten.</p>
+			  </div>
+			</div>			
+			<h5>Schritt 1.2: Raspbian installieren</h5>Wenn etcher installiert ist, lade dir das Betriebssystem(OS) herunter.<a href="https://downloads.raspberrypi.org/raspbian_full_latest"> “Raspbian ZIP Download” </a>
+			<br>Wenn das fertig ist Etcher öffnen (falls es noch nicht geöffnet ist.) Drücke auf "Select image" und wähle die Raspbian-datei aus, die wir gerade gedownloaded haben. Bei "Select Target" sollte dein Computer schon die SD-Karte gefunden haben. Dann fehlt nur noch anzufangen mit einem Klick auf "Flash".
+		  <div class="thumbnail">
+			  <img src="Bilder/Tutorial/tut_7.jpeg" title="Tutorial_Pi" alt="Bild konnte nicht geladen werden." style="width:100%">
+			  <div class="caption">
+				<p>Flash!</p>
+			  </div>
+		  </div>			
+			<br>
+			<h4>Schritt 2: Raspberry Pi einrichten</h4>
+			<h5>Schritt 2.1: Ran an den Kuchen mit Kabelsalat</h5>
+			Nachdem das Flashen fertig ist, lege die SD-Karte in deinen Raspberry Pi. (Rückseite und achte darauf, dass sie richtig rum und ganz reingesteckt)
+			<div class="thumbnail">
+			  <img src="Bilder/Tutorial/tut_6.jpeg" title="Tutorial_Pi" alt="Bild konnte nicht geladen werden." style="width:100%">
+			  <div class="caption">
+				<p>Karte einstecken.</p>
+			  </div>
+		  </div>
+		  Auf deinem Pi solltest du zwei USB Schnittstellen(Stecker) sehen. Die sind für Maus und Tastatur.
+		  Nun Stecke eine Maus und eine Tastatur per USB, ein LAN-Kabel zum Internetrouter, ein Bildschirm über HDMI und zum Schluss das Stromkabel an.
+		  Um den Raspberry PI einzurichten benötigen wir auch eine Internetverbindung. Entweder du steckst ein LAN-Kabel von deinem Router in den Raspberry PI, oder du verbindest dich per WLAN
+		  <h1>HIER ERKLÄREN WIE MAN PER WLAN INS NETZ KOMMT</h1>
+		<div class="thumbnail">
+		  <img src="Bilder/Tutorial/tut_4.jpeg" title="Tutorial_Pi" alt="Bild konnte nicht geladen werden." style="width:100%">
+		  <div class="caption">
+			<p>Alles am Pi gesteckt.</p>
+		  </div>
+		</div>
+		  
+		  
+		  <br>
+		  <h5>Schritt 2.2: Starten</h5>
+		  Wenn du den Pi an die Steckdose gesteckt hast, wird er automatisch eingeschaltet. Dann sollte der Bildschirm so aussehen:
+		<div class="thumbnail">
+		  <img src="Bilder/Tutorial/tut_8.jpeg" title="Tutorial_Pi" alt="Bild konnte nicht geladen werden." style="width:100%">
+		  <div class="caption">
+			<p>Pi startet</p>
+		  </div>
+		</div>
+		Dann wird nach den ganzen [OK] aufgefordert dich anzumelden. Dazu Tippe ein: - Aber HALT ! 
+		<br>Es kann sein, dass deine Tastatur auf englisch eingestellt ist. Das heißt z und y und paar Sonderzeichen sind vertauscht. 
+		Das werden wir aber als erstes ändern sobald wir uns eingeloggt haben.
+		Außerdem ist gut zu wissen, dass das Passwort nicht angezeigt wird. Das heißt man sieht nicht ob oder was man getippt hat.
+		<br><code>raspberrypi login:</code>  <datei>pi</datei>
+		<br><code>Password:</code>           <datei>raspberry</datei>
+		<br>
+		  <div class="thumbnail">
+			  <img src="Bilder/Tutorial/tut_9.jpeg" title="Tutorial_Pi" alt="Bild konnte nicht geladen werden." style="width:100%">
+			  <div class="caption">
+				<p>Login</p>
+			  </div>
+		  </div>	
+		  <div class="thumbnail">
+			  <img src="Bilder/Tutorial/tut_10.jpeg" title="Tutorial_Pi" alt="Bild konnte nicht geladen werden." style="width:100%">
+			  <div class="caption">
+				<p>Login</p>
+			  </div>
+		  </div>		  
+		Wenn alles geklappt hat müsste es jetzt so aussehen:
+		  <div class="thumbnail">
+			  <img src="Bilder/Tutorial/tut_11.jpeg" title="Tutorial_Pi" alt="Bild konnte nicht geladen werden." style="width:100%">
+			  <div class="caption">
+				<p>Tutorial_Pi</p>
+			  </div>
+		  </div>
+		  Bzw so:
+		  <div class="thumbnail">
+			  <img src="Bilder/Tutorial/tut_home.jpeg" title="Tutorial_Pi" alt="Bild konnte nicht geladen werden." style="width:100%">
+			  <div class="caption">
+				<p>Home- Desktop</p>
+			  </div>
+		  </div>	
+		  Das ist dein Desktop. Nennt man auch Homescreen.
+		<div class="row">
+		<div class="col-md-6">
+		  <br>Oben siehst du die Menubar (Taskleiste) mit Start, Webbrowser, Dateimanager und Terminal.	
+		  </div>
+		  		<div class="col-md-6">
+		  <div class="thumbnail">
+			  <img src="Bilder/Tutorial/tut_menubar.jpeg" title="Tutorial_Pi" alt="Bild konnte nicht geladen werden." style="width:100%">
+			  <div class="caption">
+				<p>Menubar</p>
+			  </div>
+		  </div>	
+		  </div>
+		  </div>
+		  Wenn du auf Start, also auf die Himbeere drückst, ploppt das ganze Menu auf.
+		  <div class="thumbnail">
+			  <img src="Bilder/Tutorial/tut_menu.jpeg" title="Tutorial_Pi" alt="Bild konnte nicht geladen werden." style="width:100%">
+			  <div class="caption">
+				<p>Menu</p>
+			  </div>
+		  </div>	
+		  Für manche Sachen brauchen wir ein Tool: <strong>Terminal.</strong><br>
+			Terminal ist eine textbasierte Ein-/Ausgabe-Schnittstelle für ein Computersystem. 
+			Wir können hier Befehle eingeben, um das System zu steuern oder Dateien zu bearbeiten. 
+			Um diesen Terminal zu finden, können wir auf die schwarze Box neben dem Raspberry Pi–Symbol klicken.
+		  <div class="thumbnail">
+			  <img src="Bilder/Tutorial/tut_terminal.jpeg" title="Tutorial_Pi" alt="Bild konnte nicht geladen werden." style="width:100%">
+			  <div class="caption">
+				<p>Terminal</p>
+			  </div>
+		  </div>	
+
+<h3>Nano - Texteditor</h3>
+
+<p>Nano besteht aus zwei Hauptereiche, nämlich: Textbuffer und Auswahl der Befehle. Der
+Textbuffer, was dein Datei beinhaltet ist der größte Teil des 
+Fensters. Ganz unten kann man die Liste von Tastaturkürzel oder
+Optionen sehen. Wenn du deutsche Tastatur benutzt, dann steht
+das Caret-Zeichen(^) für <b>STRG</b>  und M für <b>ALT</b>.</p>
+
+<p>Um Dateien besser zu bearbeiten, ist es empfehlend für Anfänger,
+Texteditor <b>Nano</b> zu benutzen. Hier sind die häufig benutzte Funktion in <b>Nano</b>:</p>
+
+<ul>
+	<li><p>
+		Aufruf:</br>
+		
+		Wenn das Datei im gleichen Verzeichnis, wo du dein Terminal
+		aufgerufen hast.
+
+		<p><code style="background-color: black;color: white">nano text.txt</code>
+		</p>
+		<p>Falls nicht, musst du den kompletten Pfad mitgeben.</p>
+		<p></p>
+		<code style="background-color: black;color: white">nano /home/pi/text.txt</code>
+
+		</p>
+	</li>
+	<li>
+		<p>
+		Text bearbeiten:</br>
+
+		
+		Wenn du dich in nano befindest, kannst du direkt deinen Text 
+		eingeben bzw. bearbeiten. Andere Funktionen können mit <b>STRG-(CTRL-)</b>  oder <b>ESC-Taste</b>. Mit <b>CTRL+G</b> kannst du alle Funktionen aufgelistet bekommen. Um zu den Anfangsscreen zu kommen, kannst du <b>CTRL+X</b> benutzen.	
+		
+		</p>
+	</li>
+	<li>
+		Speichern und Abschließen:</br>
+
+		<b>CTRL+O</b> zum Datei abspeichern</br></br>
+		<p>Um Nano abzuschließen, kann man <b>CTRL+X</b> verwenden. Du wirst abgefragt, ob du deine Änderung abspeichern möchte. Dafür kannst du mit Y oder N antworten. Um das Abschließen des Nanos abzubrechen, kannst du <b>CTRL+C</b> eingeben.</p>
+	</li>
+	<li><p>
+		Ausschneiden und Einfügen:</br>
+		
+		Um eine Zeile auszuschneiden, kannst du <b>CTRL+K</b> benutzen. Um
+		das zu kopieren, kannst du <b>ALT+6</b> benutzen. <b>CTRL+U</b> kannst du zum Einfügen benutzen.	
+		</p>
+	</li>
+	<li><p>
+		Finden und Ersetzen:</br>
+		<b>CTRL+W</b> benutzt man zum Finden von einem Wort bzw. Satz. <b>ALT+R</b> zum Suchen und Ersetzen.
+		</p>
+	</li>
+</ul>
+		  
+		  <br>
+		  <h5>Schritt 2.3: Konfigurieren</h5>
+		  <h5>Schritt 2.3.1: Updaten</h5>		  
+		  	Als ersten Schritt müssen wir unser System aktualisieren. Dafür 
+		  
+		  Am besten ist, wenn ihr den Pi zuerst mal updatet.
+	<div class="row">
+		<div class="col-md-3">
+		  <code>sudo apt update -y && sudo apt upgrade -y && sudo apt dist-upgrade -y && sudo apt autoremove -y</code>
+		  <br>Falls eine frage mit [Y/N] kommt einfach Enter drücken.
+		</div>
+		<div class="col-md-9">
+		  <div class="thumbnail">
+			  <img src="Bilder/Tutorial/tut_12.jpeg" title="Tutorial_Pi" alt="Bild konnte nicht geladen werden." style="width:100%">
+			  <div class="caption">
+				<p>Pi updaten</p>
+			  </div>
+		  </div>
+		</div>
+	</div>
+
+		  <h5>Schritt 2.3.2: Sprache einstellen</h5>	
+<!--https://neu.lu/2019/01/spracheinstellung-von-ubuntu-und-debian-auf-deutsch-umstellen/-->
+<p>Wenn du bei dem ersten Hochfahren von Raspbian die falsche Spracheinstellung gewählt hast,
+kannst du mit dieser unteren Anleitung die Sprache ändern.</p>
+
+<ol type="1">
+<li>
+	<p>  Öffne ein Terminal und gibt den unteren Befehl ein:</br></br>
+		<code>
+		sudo mousepad /etc/default/locale</br></br>
+		</code>
+		
+		Ein Datei, locale, wird geöffnet. Schreib untere Einträge in dieses File rein:</br></br>
+
+		
+			<mark style="background-color: rgb(220,220,220)">LANG=de_DE.UTF-8 UTF-8</mark></br>
+			
+			<mark style="background-color: rgb(220,220,220)">LANGUAGE=de_DE.UTF-8 UTF-8</mark></br>
+				
+			<mark style="background-color: rgb(220,220,220)">LC_MESSAGES=de_DE.UTF-8 UTF-8</mark></br></br>
+	
+
+		Speichere das Datei ab und schließe es ab. </br>
+	</p>
+</li>
+
+<li>
+	<p> Danach gib diesen Befehl ein:</br></br>
+
+		<code>
+		sudo mousepad /etc/environment</br></br>
+		</code>
+		
+		Wie bei dem oberen Schritt wird es hier auch ein Datei geöffnet. Füge die untere
+		Einträge hinzu:</br></br>
+		
+		<mark style="background-color: rgb(220,220,220)">LC_ALL=de_DE.UTF-8</mark></br>
+		<mark style="background-color: rgb(220,220,220)">LANG=de_DE.UTF-8</mark></br></br>
+
+		Speichere das Datei ab und schließe es ab.</br>
+	</p>
+</li>
+
+<li>
+<p> Als letztes müssen wir nur noch <code>sudo update-locale</code> in unser Terminal dürchführen und unseren Pi dann 
+   restarten/rebooten.</br></br>
+	</p>
+</li>
+</ol>
+		  <h5>Schritt 2.3.3: User ändern - Optional</h5>	
+		  Wir erstellen jetzt einen neuen User mit adduser dann ausloggen und als neuer user einloggen. user pi löschen
+		  <br><h5>Schritt 2.3.4: Passwort ändern - Optional</h5>	
+	<div class="row">
+		<div class="col-md-3">
+		  Um das Passwort von dem Benutzer Pi zu ändern, können wir den Befehl 
+		  <br><code>sudo raspi-config</code><br> in Terminal eingeben. 
+		  Wähle den ersten Eintrag von dem Konfigurationsprogramm aus und gib dein neues Passwort ein.
+		</div>
+		<div class="col-md-9">
+		  <div class="thumbnail">
+			  <img src="Bilder/Tutorial/raspi-config.png" title="Tutorial_Pi" alt="Bild konnte nicht geladen werden." style="width:100%">
+			  <div class="caption">
+				<p>Passwort ändern</p>
+			  </div>
+		  </div>
+		</div>
+	</div>
+<br>
+<h4>Probleme:</h4>
+<h5>Mein Pi startet nicht.</h5>
+Wenn beim Starten ein Blitzsymbol auftaucht, dann heißt das, dass er vermutlich zu wenig Strom bekommt. 
+Vergewissere dich, dass das Stromkabel das letzte was du anschließt. Achte auch darauf, 
+dass dein Bildschirm oder gar die Tastatur/Maus nicht zu viel Strom ziehen. 
+Das heißt die leucht/gamingfunktion ausschalten und keinen Fernsehr, bzw einen kleineren Bildschirm benutzen. 
+Oder einfach ein anderer Stromstecker benutzen (Mit 2 Ampere).
+<br><br>
+Jetzt bist du auf dem Desktop von deinem Pi. Er verhält sich jetzt wie ein ganz normaler Computer. 
+Du kannst ins Web gehen oder andere Programme öffnen. Aber wir werden uns natürlich weniger damit beschäftigen, 
+wir wollen ja was selbst programmieren !
+<br>
+Ssh für die cool kids
+https://gridscale.io/community/tutorials/per-ssh-mit-cloud-server-verbinden/
+		  <br>
+		  <h5>Schritt 2.4: Plugins installieren</h5>
+				Damit ist in erster Linie Python gemeint.
+			
+			<br><br><br>Dann los! :D
+
+
+
+	
+
+</div>
+		
+<!-- RECHTS -->		
+    <div class="col-sm-4">
+          <h2 class="mt-4">Kontakt</h2>
+          <address>
+            <strong>Teamprojekt Pi - Samantha Isted</strong>
+            <br><abbr title="Email">Email:</abbr>
+            <a href="mailto:support_pi_projects@protonmail.com">support_pi_projects@protonmail.com</a>
+          </address>
+<hr>
+<!-- PREISE TABELLE -->
+<div class="table-responsive">
+  <caption><h3>Material-/Preisliste</h3></caption>
+<table class="table table-bordered">
+  <thead>
+    <tr>
+      <th scope="col">Material</th>
+	  <th scope="col">Menge</th>
+	  <th scope="col">Wo zu finden</th>
+      <th scope="col">Preis</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th scope="row">Raspberry Pi Serie 4</th>
+	  <td>1</td>
+	  <td>Amazon <a href="https://www.amazon.de/s?k=Raspberry+pi&__mk_de_DE=%C3%85M%C3%85%C5%BD%C3%95%C3%91&ref=nb_sb_noss_2">hier</a>.
+	  oder bei Pimodori <a href="https://shop.pimoroni.com/?q=raspberry+pi">hier</a></td>
+	  <td>ca 40€</td>
+    </tr>
+    <tr>
+      <th scope="row">Gutes Stromkabel (2 A)</th>
+	  <td>1</td>
+	  <td>Amazon <a href="https://www.amazon.de/Ladeger%C3%A4t-Netzteil-Micro-USB-Kabel-Samsung-Motorola-Wei%C3%9F/dp/B07YJGKPD9/ref=sr_1_3_sspa?__mk_de_DE=%C3%85M%C3%85%C5%BD%C3%95%C3%91&crid=1G3L1ZUWYJ121&keywords=2a+usb+ladeger%C3%A4t&qid=1582034182&sprefix=2+a+%2Caps%2C189&sr=8-3-spons&psc=1&spLa=ZW5jcnlwdGVkUXVhbGlmaWVyPUEzUU1UWlkzQzFKWVZIJmVuY3J5cHRlZElkPUExMDI3NjcyMjJMNUtWOEE4NzcwSyZlbmNyeXB0ZWRBZElkPUEwOTcxMDg5MkhBUUMxQjZGRFBSOSZ3aWRnZXROYW1lPXNwX2F0ZiZhY3Rpb249Y2xpY2tSZWRpcmVjdCZkb05vdExvZ0NsaWNrPXRydWU=">hier</a>.</td>
+	  <td>ca 10€</td>
+    </tr>
+	<tr>
+      <th scope="row">MIKRO SD-KARTE 8GB</th>
+	  <td>1</td>
+	  <td>Amazon <a href="https://www.amazon.de/Intenso-Micro-Class-Speicherkarte-SD-Adapter/dp/B008RDCCFS/ref=sr_1_5?__mk_de_DE=%C3%85M%C3%85%C5%BD%C3%95%C3%91&keywords=micro+sd+karte+8gb&qid=1582034607&sr=8-5">hier</a>.</td>
+	  <td>ca 10€</td>
+    </tr>
+  </tbody>
+</table>
+</div>
+ <!-- PREISE TABELLE ENDE -->
+    </div>
+<!-- RECHTS ENDE -->      
+	  
+</div>
+</div>
+<!-- Page Content ENDE-->
+
+    <!-- Footer -->
+    <footer class="py-5 bg-dark">
+      <div class="container">
+        <p class="m-0 text-center text-white">Copyright &copy; Samantha Isted 2020</p>
+		<a href="Impressum.html" class="btn btn-primary">Impressum</a>
+		<a href="Kontakt.html" class="btn btn-primary">Kontakt</a>
+      </div>
+      <!-- /.container -->
+    </footer>
+
+    <!-- Bootstrap core JavaScript -->
+    <script src="vendor/jquery/jquery.min.js"></script>
+    <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+
+  </body>
+
+</html>
